@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+    />
+    <link rel="stylesheet" href="assets/styles/main.css" />
+    <link rel="stylesheet" href="assets/styles/product-slider.css" />
+    <link rel="stylesheet" href="assets/styles/repsonsive.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="app relative">
+      <header
+        class="flex justify-between items-center w-full h-[96px] pr-[2%] pl-[6%] text-white text-[14px] font-medium z-[69]"
+      >
+        <div class="flex items-center w-[30%]">
+          <img
+            src="/assets/images/logo.png"
+            alt=""
+            class="logo w-[50px] mr-5"
+          />
+          <div class="search-input">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" class="w-full pl-4" />
+          </div>
+          <i
+            id="mobile-bar"
+            class="fa-solid fa-bars mobile-btn hidden"
+            onclick="handleBarClick()"
+          ></i>
+        </div>
+        <div class="header-menu flex items-center">
+          <ul class="flex">
+            <li>About</li>
+            <li>Sản Phẩm</li>
+            <li>Hướng Dẫn</li>
+            <li>Chính Sách</li>
+          </ul>
+          <button class="login-btn">Đăng Nhập</button
+          ><button class="shop-btn">Shop Now</button>
+        </div>
+      </header>
+      <div
+        id="overlay"
+        class="hidden fixed top-0 right-0 bottom-0 left-0 w-full h-full bg-black opacity-50 z-[69]"
+        onclick="handleOverlayClick()"
+      ></div>
+      <div
+        id="mobile-menu"
+        class="hidden w-[50%] h-[100vh] py-5 fixed top-0 right-0 bg-[#33323F] text-[#eee] z-[70]"
+      >
+        <div class="px-3 mb-5 flex justify-between items-center">
+          <img src="/assets/images/logo.png" alt="" /><i
+            id="close-btn"
+            class="fa-solid fa-xmark p-1 text-[24px]"
+            onclick="handleCloseBtn()"
+          ></i>
+        </div>
+        <ul>
+          <a
+            ><li
+              class="px-3 py-2 text-[18px] font-semibold border-t-[1px] border-[#d3d3d3] hover:bg-[#d3d3d3]"
+            >
+              About
+            </li></a
+          >
+          <a
+            ><li
+              class="px-3 py-2 text-[18px] font-semibold border-t-[1px] border-[#d3d3d3] hover:bg-[#d3d3d3]"
+            >
+              Sản Phẩm
+            </li></a
+          >
+          <a
+            ><li
+              class="px-3 py-2 text-[18px] font-semibold border-t-[1px] border-[#d3d3d3] hover:bg-[#d3d3d3]"
+            >
+              Hướng Dẫn
+            </li></a
+          >
+          <a
+            ><li
+              class="px-3 py-2 text-[18px] font-semibold border-t-[1px] border-[#d3d3d3] hover:bg-[#d3d3d3]"
+            >
+              Chính Sách
+            </li></a
+          >
+          <a
+            ><li
+              class="px-3 py-2 text-[18px] font-semibold border-t-[1px] border-[#d3d3d3] hover:bg-[#d3d3d3]"
+            >
+              Đăng Nhập
+            </li></a
+          >
+          <a
+            ><li
+              class="px-3 py-2 text-[18px] font-semibold border-t-[1px] border-[#d3d3d3] hover:bg-[#d3d3d3]"
+            >
+              Shop Now
+            </li></a
+          >
+        </ul>
+      </div>
+      <main class="overflow-hidden">
+        <div class="banner flex justify-between">
+          <div
+            class="banner-content flex flex-col justify-center items-start w-[50%] pl-[6%] hiddenLeft"
+          >
+            <div class="w-[84%]">
+              <h1 class="w-[60%] mb-3 text-[48px] font-bold leading-[64px]">
+                IDCONNECT<br />ECO-System
+              </h1>
+              <p class="mb-5">
+                IDConnect là hệ sinh thái đa dạng các sản phẩm công nghệ bao gồm
+                : ID-Card, ID-Pet, ID-Sticker, ID-Wristband, ID-Badge,...
+              </p>
+              <p class="text-[28px] leading-10">
+                GIÚP NGƯỜI DÙNG KẾT NỐI NHANH NHẤT CHỈ 1S.
+              </p>
+            </div>
+            <button class="store-btn">Đến cửa hàng</button>
+          </div>
+          <div class="relative w-[45%]">
+            <img
+              src="/assets/images/banner-ball.png"
+              alt=""
+              class="banner-bg hiddenRight"
+            />
+            <img
+              src="/assets/images/banner-ellipse.png"
+              alt=""
+              class="banner-ellipse absolute top-[0%] left-[-50%] max-w-[150%] w-[150%] z-[-2]"
+            />
+            <img
+              src="/assets/images/vector-banner1.png"
+              alt=""
+              class="banner-bg absolute left-[0] bottom-[0] w-full z-[-1]"
+            />
+            <img
+              src="/assets/images/vector-banner2.png"
+              alt=""
+              class="banner-bg absolute left-[40%] bottom-[0] w-[50%] z-[-1]"
+            />
+          </div>
+        </div>
+        <div class="container">
+          <div
+            class="banner-info flex w-full px-7 py-7 mb-[70px] rounded-[100px] hiddenLeft"
+          >
+            <div class="flex border-r-[1px] border-[#5C5578]">
+              <img src="/assets/images/location.png" alt="" />
+              <div>
+                <p>Văn phòng đa quốc gia</p>
+                <p>Vietnam, UK, US, China</p>
+              </div>
+            </div>
+            <div class="flex border-r-[1px] border-[#5C5578]">
+              <img src="/assets/images/phone-call.png" alt="" />
+              <div>
+                <p>Hỗ Trợ 24/7</p>
+                <p>Tổng đài miễn phí</p>
+              </div>
+            </div>
+            <div class="flex">
+              <img src="/assets/images/people.png" alt="" />
+              <div>
+                <p>Hợp Tác</p>
+                <p>idconnect.icon@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="intro relative px-[6%]">
+          <img
+            src="/assets/images/intro-ellipse.png"
+            alt=""
+            class="intro-ellipse absolute top-[-170%] left-[0] z-[-1]"
+          />
+          <div class="intro-content flex justify-between items-center mb-10">
+            <div class="w-[40%] hiddenLeft">
+              <p class="text-[28px] font-bold leading-7">GIỚI THIỆU</p>
+              <p class="flex items-center text-[30px] font-light">
+                VỀ IDCONNECT
+                <img
+                  src="/assets/images/intro-arrow.png"
+                  alt=""
+                  class="h-[65px] ml-10"
+                />
+              </p>
+            </div>
+            <div class="w-[60%] hiddenRight">
+              <p class="mb-1">
+                Sử dụng công nghệ giao tiếp gần Near Field Communication (NFC)
+                kết hợp cùng nền tảng hệ thống độc quyền IDG nhằm giúp người
+                dùng thuận tiện hơn trong việc chia sẻ thông tin, tiết kiệm chi
+                phí và bảo vệ môi trường.
+              </p>
+              <p>
+                Các sản phẩm của IDConnect giúp giải quyết các vấn đề mà sản
+                phẩm truyền thống đang gặp phải như chi phí, thiết kế, dữ liệu,
+                kết nối, chất liệu, và độ bền. bảo vệ môi trường.
+              </p>
+            </div>
+          </div>
+          <img
+            src="/assets/images/feature-ellipse.png"
+            alt=""
+            class="absolute top-[-120%] right-[0] z-[-1]"
+          />
+          <div class="features mb-[70px]">
+            <p class="mb-10 text-center text-[28px] font-bold hiddenLeft">
+              TÍNH NĂNG NỔI BẬT
+            </p>
+            <div class="features-list w-[70%] mx-auto hiddenRight">
+              <div class="grid grid-cols-3 gap-10">
+                <div>
+                  <p>IP68</p>
+                  <p>Khả năng kháng nước, chống bụi chuẩn IP68</p>
+                </div>
+                <div>
+                  <p>Công nghệ</p>
+                  <p>Sở hữu công nghệ và hệ sinh thái toàn diện</p>
+                </div>
+                <div>
+                  <p>Customize</p>
+                  <p>
+                    Khả năng tuỳ biến, cá nhân hoá thiết kế, giao diện, vật liệu
+                  </p>
+                </div>
+              </div>
+              <div class="w-[80%] mx-auto my-10 grid grid-cols-2 gap-[50px]">
+                <div>
+                  <p>Real-Time</p>
+                  <p>Lorem isusie hihon mgahs hanjjs</p>
+                </div>
+                <div>
+                  <p>Android & IOS</p>
+                  <p>Lorem isusie hihon mgahs hanjjs</p>
+                </div>
+              </div>
+              <div class="grid grid-cols-3 gap-10">
+                <div>
+                  <p>IP68</p>
+                  <p>Lorem isusie hihon mgahs hanjjs</p>
+                </div>
+                <div>
+                  <p>10 năm</p>
+                  <p>Lorem isusie hihon mgahs hanjjs</p>
+                </div>
+                <div>
+                  <p>Update</p>
+                  <p>Lorem isusie hihon mgahs hanjjs</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="why px-[6%]">
+          <div class="flex justify-between items-center mb-10">
+            <div class="w-[40%] hiddenLeft">
+              <p class="text-[28px] font-bold leading-7">WHY BUILD</p>
+              <p class="flex items-center text-[30px] font-light">
+                WITH IDCONNECT
+                <img
+                  src="/assets/images/intro-arrow.png"
+                  alt=""
+                  class="h-[65px] ml-10"
+                />
+              </p>
+            </div>
+            <div class="w-[60%] hiddenRight">
+              <p>
+                Nhận thấy danh thiếp giấy và các sản phẩm khác đã lỗi thời cũng
+                như nhu cầu kết nối của mọi người ngày càng tăng trong thời đại
+                kỹ thuật số hôm nay, chúng tôi ra mắt những dòng sản phẩm giúp
+                giải quyết & cải thiện những vấn đề mà các sản phẩm truyền thống
+                đang có : Chi phí, vật liệu, thiết kế,... Đặc biệt là trao đổi
+                và truyền tải thông tin nhanh nhất chỉ 1 chạm vào smartphone của
+                bạn bè, đối tác ngay lập tức họ có thông tin mà bạn muốn chia
+                sẻ. (mạng xã hội, số điện thoại, website, ứng dụng...)
+              </p>
+            </div>
+          </div>
+        </div>
+        <section class="game-section px-[6%]">
+          <div class="owl-carousel custom-carousel owl-theme">
+            <div class="item active">
+              <img src="/assets/images/prd1.png" alt="" />
+              <div class="item-desc">
+                <h3>ID-Card</h3>
+                <p>
+                  Phù hợp cho giới văn phòng, từ nhân viên đến giám đốc, với đa
+                  dạng vật liệu, giấy, PVC, kim loại và cả Mạ vàng.
+                </p>
+              </div>
+              <button>TRUY CẬP</button>
+            </div>
+            <div class="item">
+              <img src="/assets/images/prd2.png" alt="" />
+              <div class="item-desc">
+                <h3>ID-PET</h3>
+                <p>
+                  Thể hiện tình yêu của bạn với thú cưng bằng thẻ tên Digital
+                  Pet Tag, vừa dễ dàng tìm nếu đi lạc vừa chia sẻ cùng bạn bè.
+                </p>
+              </div>
+              <button>TRUY CẬP</button>
+            </div>
+            <div class="item">
+              <img src="/assets/images/prd3.png" alt="" />
+              <div class="item-desc">
+                <h3>ID-STICKER</h3>
+                <p>
+                  Nhỏ gọn, dễ tuỳ chỉnh là tính năng ưu việt phù hợp cho những
+                  ai ưa tính sự tiện lợi thể hiện cá tính và năng động.
+                </p>
+              </div>
+              <button>TRUY CẬP</button>
+            </div>
+            <div class="item">
+              <img src="/assets/images/prd4.png" alt="" />
+              <div class="item-desc">
+                <h3>ID-Luggage</h3>
+                <p>
+                  Thường dùng cho khách đi du lịch, tàu, xe máy bay, chống thất
+                  lạc hành lý. đó là thẻ hành lý 4.0 của ID-Connect
+                </p>
+              </div>
+              <button>TRUY CẬP</button>
+            </div>
+            <div class="item">
+              <img src="/assets/images/prd5.png" alt="" />
+              <div class="item-desc">
+                <h3>ID-Keychain</h3>
+                <p>
+                  Đảm bảo giữ kết nối mọi lúc mọi nơi, không cần pin vẫn liên
+                  lạc với mọi người, đôi tác, khách hàng.
+                </p>
+              </div>
+              <button>TRUY CẬP</button>
+            </div>
+            <div class="item">
+              <img src="/assets/images/prd6.png" alt="" />
+              <div class="item-desc">
+                <h3>ID-Wallet</h3>
+                <p>
+                  Chúng tôi tích hợp công nghệ chống đánh cắp dữ liệu thẻ của
+                  quý khách vào ví da. (ảnh minh hoạ )
+                </p>
+              </div>
+              <button>TRUY CẬP</button>
+            </div>
+            <div class="item">
+              <img src="/assets/images/prd7.png" alt="" />
+              <div class="item-desc">
+                <h3>ID-Wristband</h3>
+                <p>
+                  Trẻ em và người già : định vị, liên hệ, gọi kháng nước, chống
+                  bụi, tích hợp mạng xã hội và thông báo.
+                </p>
+              </div>
+              <button>TRUY CẬP</button>
+            </div>
+          </div>
+        </section>
+        <div class="container">
+          <div
+            class="pick flex justify-between items-center px-[60px] py-[60px] bg-black rounded-[20px]"
+          >
+            <span class="w-[35%] text-[38px] font-medium hiddenLeft"
+              >Chọn sản phẩm <br />
+              và kết nối ngay hôm nay</span
+            >
+            <div class="flex justify-between w-[50%]">
+              <button class="call-btn hiddenRight">Gọi Tư Vấn</button
+              ><button class="pick-btn hiddenRight">Chọn Sản Phẩm</button>
+            </div>
+          </div>
+          <div class="start flex p-[50px]">
+            <div class="flex flex-col w-[47%] px-[40px] hiddenLeft">
+              <p class="mb-2 text-[30px]">Bắt đầu</p>
+              <p class="w-[80%] mb-5 text-[#ffffff80]">
+                Chọn mua sản phẩm phù hợp với nhu cầu của bạn, có thể là Card -
+                Danh thiếp thông minh, ID Pet - cho thú cưng của bạn,
+                ID-Sticker, ID0Luggage (tag hành lý) và nhiều hơn thế nữa...
+              </p>
+              <button class="buy-btn">Mua Ngay</button>
+            </div>
+            <div class="start-list flex flex-col w-[53%] hiddenRight">
+              <div class="flex mb-7 rounded-[20px] overflow-hidden">
+                <div class="w-[52%]">
+                  <span>1</span>
+                  <p class="mb-2 font-medium text-[18px]">Kích hoạt</p>
+                  <p class="text-[#ffffff80]">
+                    Chỉ 1 chạm vào điện thoại của bạn, tạo thông tin đăng nhập
+                    của riêng bạn.
+                  </p>
+                </div>
+                <div class="w-[48%]">
+                  <img src="/assets/images/start1.png" alt="" />
+                </div>
+              </div>
+              <div class="flex mb-7 rounded-[20px] overflow-hidden">
+                <div class="w-[52%]">
+                  <span>2</span>
+                  <p class="mb-2 font-medium text-[18px]">Tuỳ Chỉnh</p>
+                  <p class="text-[#ffffff80]">
+                    Thêm thông tin liên hệ, mạng xã hội, bản đồ google map, âm
+                    nhạc, và hơn thế nữa...
+                  </p>
+                </div>
+                <div class="w-[48%]">
+                  <img src="/assets/images/start2.png" alt="" />
+                </div>
+              </div>
+              <div class="flex mb-7 rounded-[20px] overflow-hidden">
+                <div class="w-[52%]">
+                  <span>3</span>
+                  <p class="mb-2 font-medium text-[18px]">Kết nối</p>
+                  <p class="text-[#ffffff80]">
+                    Thêm thông tin liên hệ, mạng xã hội, bản đồ google map, âm
+                    nhạc, và hơn thế nữa...
+                  </p>
+                </div>
+                <div class="w-[48%]">
+                  <img src="/assets/images/start32.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tech-wrapper relative mb-[100px]">
+            <div class="tech">
+              <div id="canvas_container"></div>
+              <div class="tech-content">
+                <p class="font-bold mb-5 hiddenLeft">TECHNOLOGY & HARDWARE</p>
+                <p class="font-light hiddenRight">POWERED BY IDCONNECT.ICU</p>
+              </div>
+            </div>
+            <img
+              src="/assets/images/tech-phone.png"
+              alt=""
+              class="absolute bottom-[-11%] right-[50%] translate-x-[50%] w-[90px]"
+            />
+          </div>
+        </div>
+        <div class="social w-full mb-[70px]">
+          <img src="/assets/images/social.png" alt="" class="w-full" />
+        </div>
+
+        <div class="container">
+          <div class="power relative mb-[60px]">
+            <div class="power-heading flex items-center mb-[50px]">
+              <div class="w-[50%] hiddenLeft">
+                <p class="text-[28px] font-bold leading-7">SỨC MẠNH</p>
+                <p class="flex items-center text-[30px] font-light">
+                  CỦA IDCONNECT
+                  <img
+                    src="/assets/images/intro-arrow.png"
+                    alt=""
+                    class="h-[65px] ml-10"
+                  />
+                </p>
+              </div>
+              <div>
+                <img
+                  src="/assets/images/power-banner.png"
+                  alt=""
+                  class="hiddenRight"
+                />
+              </div>
+            </div>
+            <div class="power-list grid grid-cols-3 gap-10 hiddenLeft">
+              <div>
+                <p class="text-[18px] font-medium">Giao diện UI/UX</p>
+                <p class="font-light">người dùng và website</p>
+                <img src="/assets/images/power1.png" alt="" />
+              </div>
+              <div>
+                <p class="text-[18px] font-medium">Công nghệ</p>
+                <p class="font-light">mạnh mẽ nhất hiện tại</p>
+                <img src="/assets/images/power2.png" alt="" />
+              </div>
+              <div>
+                <p class="text-[18px] font-medium">Tối ưu tốc độ</p>
+                <p class="font-light">gần như không độ trễ</p>
+                <img src="/assets/images/power3.png" alt="" />
+              </div>
+              <div>
+                <p class="text-[18px] font-medium">Đa dạng sản phẩm</p>
+                <p class="font-light">người dùng và website</p>
+                <img src="/assets/images/power4.png" alt="" />
+              </div>
+              <div>
+                <p class="text-[18px] font-medium">Tính năng mới</p>
+                <p class="font-light">được cập nhật liên tục</p>
+                <img src="/assets/images/power5.png" alt="" />
+              </div>
+              <div>
+                <p class="text-[18px] font-medium">Đa quốc gia</p>
+                <p class="font-light">Vietnam, UK, US, China</p>
+                <img src="/assets/images/power6.png" alt="" />
+              </div>
+              <div>
+                <p class="text-[18px] font-medium">Đi đầu về chất liệu</p>
+                <p class="font-light">Tre, PVC, Vàng, ...</p>
+                <img src="/assets/images/power7.png" alt="" />
+              </div>
+              <div>
+                <p class="text-[18px] font-medium">Bào hành</p>
+                <p class="font-light">1 đổi 1 trong 1 năm</p>
+                <img src="/assets/images/power8.png" alt="" />
+              </div>
+              <div>
+                <p class="text-[18px] font-medium">Chi phí phù hợp</p>
+                <p class="font-light">đáp ứng mọi nhu cầu</p>
+                <img src="/assets/images/power9.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="question px-[17%] mb-[70px]">
+            <p class="text-center mb-10 hiddenLeft">Câu hỏi thường gặp !!</p>
+            <div class="answers-list hiddenRight">
+              <div class="tab">
+                <input type="checkbox" id="chck1" />
+                <label class="tab-label" for="chck1">Lần đầu sử dụng ?</label>
+                <div class="tab-content">
+                  <p>
+                    Lần đầu kích hoạt bạn chỉ cần tạo tài khoản bằng tên và mật
+                    khẩu, sau đó nhấn nút kích hoạt bạn sẽ vào trang chỉnh sửa
+                    thông tin, ở đây có hướng dẫn cụ thể.
+                  </p>
+                  <br />
+                  <p>
+                    Lần sau bạn chỉ cần chạm lại thẻ lần nữa vào điện thoại của
+                    mình sẽ có nút chỉnh sửa thông tin, bạn tuỳ ý thêm, xoá
+                    những gì bạn muốn. hoặc bạn truy cập website idconnect.icu
+                    đăng nhập để cập nhật thông tin của bạn trên máy tính.
+                  </p>
+                </div>
+              </div>
+              <div class="tab">
+                <input type="checkbox" id="chck2" />
+                <label class="tab-label" for="chck2"
+                  >Cách sử dụng như thế nào ?</label
+                >
+                <div class="tab-content">
+                  <p>
+                    Chỉ cần chạm sản phẩm của IDConnect (IDCard, IDSticker,
+                    IDPet,...) vào smartphone của người đối diện (hoặc ngược
+                    lại) là thông tin của bạn muốn chi sẻ tự động hiển thị đầy
+                    đủ trên màn hình.
+                  </p>
+                  <br />
+                  <p>
+                    Scan mã QR có trên thẻ : người dùng mở camera điện thoại,
+                    zalo, hoặc bất kỳ ứng dụng nào khi dùng đến camera quét mã
+                    QR sẽ có ngay thông tin của bạn.
+                  </p>
+                  <br />
+                  <p>
+                    Link : chia sẻ đường link của bạn cho bạn bè, đối tác qua
+                    tin nhắn, facebook messenger, zalo hay bất kỳ hình thức nào
+                    đều được.
+                  </p>
+                  <br />
+                  <p>
+                    Sau khi bạn chỉnh sửa và nhấn nút cập nhật, sản phẩm của
+                    IDConnect sẽ cập nhật dữ liệu đó ngay lập tức (bao gồm cả
+                    QR) nên khi khách hàng, đối tác cũng nhận được thông tin mà
+                    bạn vừa thay đổi.
+                  </p>
+                </div>
+              </div>
+              <div class="tab">
+                <input type="checkbox" id="chck3" />
+                <label class="tab-label" for="chck3"
+                  >Những dòng điện thoại nào có thể áp dụng được ?
+                </label>
+                <div class="tab-content">
+                  <p>
+                    Yêu cầu smartphone có kết nôi internet và có NFC, Tất cả các
+                    điện thoại sản xuất từ năm 2014 đều dùng được, đặc biệt là
+                    từ 2018 đến nay tính năng NFC có sẵn trong điện thoại đã tự
+                    động được bật, hầu hết điện thoại hiện nay đều được bật sẵn,
+                    trường hợp chưa được bật hãy mở tính năng này trong cài đặt.
+                  </p>
+                  <br />
+                  <p>
+                    Trường hợp khác tiện hơn, người khác có thể dùng camera zalo
+                    hoặc chỉ cần mở camera để quét mã QR trong mỗi thẻ có sẵn
+                    đều dùng được.
+                  </p>
+                </div>
+              </div>
+              <div class="tab">
+                <input type="checkbox" id="chck4" />
+                <label class="tab-label" for="chck4"
+                  >Tôi chỉnh sửa thông tin của mình như thế nào ?
+                </label>
+                <div class="tab-content">
+                  <p>
+                    Ví dụ với momo, tương tự với các đường link khác, như mạng
+                    xã hội, âm nhạc,....
+                  </p>
+                  <br />
+                  <p>
+                    Bước 1. Bạn truy cập ứng dụng Momo, chọn vào mục “Chuyển
+                    tiền”.
+                  </p>
+                  <p>Bước 2. Chọn “Link nhận tiền”, sau đó copy link</p>
+                  <p>
+                    Bước 3. Dán link vào trường thông tin “Momo” trên Danh thiếp
+                    Điện tử của bạn.
+                  </p>
+                </div>
+              </div>
+              <div class="tab">
+                <input type="checkbox" id="chck5" />
+                <label class="tab-label" for="chck5">Thời gian sử dụng ?</label>
+                <div class="tab-content">
+                  Mọi sản phẩm của IDConnect đều được sử dụng mãi mãi, không
+                  giới hạn số lần chạm thẻ, không giới sạn số lần quét mã QR
+                </div>
+              </div>
+              <div class="tab">
+                <input type="checkbox" id="chck6" />
+                <label class="tab-label" for="chck6"
+                  >Tính bảo mật của sản phẩm ?
+                </label>
+                <div class="tab-content">
+                  <p>
+                    Các dòng sản phẩm của IDConnect cho phép bạn chọn các thông
+                    tin mà bạn muốn hiển thị và chia sẻ cho bạn bè/ đối tác/
+                    khách hàng.
+                  </p>
+                  <br />
+                  <p>
+                    Các dòng sản phẩm của IDConnect chỉ gắn link dẫn đến các
+                    trang thông tin của bạn nên bạn có thể tuyệt đối yên tâm là
+                    sẽ không bị mất các tài khoản như Facebook, Website, Zalo,…
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="font-medium">
+        <div class="container">
+          <div class="footer-top flex justify-between mb-10">
+            <div class="w-[25%]">
+              <div class="flex mb-5">
+                <img src="/assets/images/logo.png" alt="" class="mr-10" />
+                <div>
+                  <p>ID-CONNECT</p>
+                  <p>ECO-SYSTEM</p>
+                </div>
+              </div>
+              <p class="text-[15px] leading-5">
+                ID-Connect sinh ra nhằm thay thế các sản phẩm truyền thống bằng
+                cách tích hợp thông tin điện tử, sử dụng công nghệ đám mây được
+                dùng như 1 sản phẩm vật lý và cả nền tảng online trong cùng 1
+                tài khoản
+              </p>
+            </div>
+            <div class="w-[22%]">
+              <ul>
+                <li>ABOUT</li>
+                <li>ID.CARD</li>
+                <li>ID.PET</li>
+                <li>ID.STICKER</li>
+                <li>ID.LUGGAGE</li>
+              </ul>
+            </div>
+            <div class="w-[22%]">
+              <ul>
+                <li>F.A.Q</li>
+                <li>SẢN PHẨM</li>
+                <li>HƯỚNG DẪN</li>
+                <li>CHÍNH SÁCH</li>
+                <li>LIÊN HỆ</li>
+              </ul>
+            </div>
+            <div>
+              <p>Follow us on</p>
+              <ul class="socials flex justify-between">
+                <li><i class="fa-brands fa-facebook"></i></li>
+                <li><i class="fa-brands fa-twitter"></i></li>
+                <li><i class="fa-brands fa-linkedin-in"></i></li>
+                <li><i class="fa-brands fa-youtube"></i></li>
+                <li><i class="fa-brands fa-youtube"></i></li>
+                <li><i class="fa-brands fa-pinterest"></i></li>
+              </ul>
+              <button class="store-btn">MUA NGAY</button>
+            </div>
+          </div>
+          <div
+            class="footer-bottom w-[90%] py-[25px] mx-auto text-center text-[14px] border-t-[1px] border-[#6c6789]"
+          >
+            2023 © IDCONNECT.ICU WEBSITE - CODE, DEV & DESIGN BY IDG - ALL
+            RIGHTS RESERVED
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.121.1/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.121.1/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
