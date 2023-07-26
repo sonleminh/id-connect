@@ -4,12 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -33,7 +27,7 @@
   <body>
     <div class="app relative">
       <header
-        class="flex justify-between items-center w-full h-[96px] pr-[2%] pl-[6%] text-white text-[14px] font-medium z-[69]"
+        class="fixed top-0 flex justify-between items-center w-full h-[96px] pr-[2%] pl-[6%] text-white text-[14px] font-medium z-[69]"
       >
         <div class="flex items-center w-[30%]">
           <img
@@ -132,7 +126,7 @@
               <h1 class="w-[60%] mb-3 text-[48px] font-bold leading-[64px]">
                 IDCONNECT<br />ECO-System
               </h1>
-              <p class="mb-5">
+              <p class="banner-desc mb-5">
                 IDConnect là hệ sinh thái đa dạng các sản phẩm công nghệ bao gồm
                 : ID-Card, ID-Pet, ID-Sticker, ID-Wristband, ID-Badge,...
               </p>
@@ -146,7 +140,7 @@
             <img
               src="/assets/images/banner-ball.png"
               alt=""
-              class="banner-bg hiddenRight"
+              class="hiddenRight"
             />
             <img
               src="/assets/images/banner-ellipse.png"
@@ -233,45 +227,49 @@
             <p class="mb-10 text-center text-[28px] font-bold hiddenLeft">
               TÍNH NĂNG NỔI BẬT
             </p>
-            <div class="features-list w-[70%] mx-auto hiddenRight">
-              <div class="grid grid-cols-3 gap-10">
-                <div>
+            <div class="features-list w-[70%] mx-auto">
+              <div class="hiddenLeft grid grid-cols-3 gap-10">
+                <div class="">
                   <p>IP68</p>
                   <p>Khả năng kháng nước, chống bụi chuẩn IP68</p>
                 </div>
-                <div>
+                <div class="">
                   <p>Công nghệ</p>
                   <p>Sở hữu công nghệ và hệ sinh thái toàn diện</p>
                 </div>
-                <div>
+                <div class="">
                   <p>Customize</p>
                   <p>
                     Khả năng tuỳ biến, cá nhân hoá thiết kế, giao diện, vật liệu
                   </p>
                 </div>
               </div>
-              <div class="w-[80%] mx-auto my-10 grid grid-cols-2 gap-[50px]">
-                <div>
+              <div
+                class="hiddenRight w-[80%] mx-auto my-10 grid grid-cols-2 gap-[50px]"
+              >
+                <div class="">
                   <p>Real-Time</p>
-                  <p>Lorem isusie hihon mgahs hanjjs</p>
+                  <p>Khả năng cập nhật dữ liệu theo thời gian thực.</p>
                 </div>
-                <div>
+                <div class="">
                   <p>Android & IOS</p>
-                  <p>Lorem isusie hihon mgahs hanjjs</p>
+                  <p>
+                    Sử dụng tốt trên mọi loại điện thoại bao gồm IOS và Android.
+                  </p>
                 </div>
               </div>
-              <div class="grid grid-cols-3 gap-10">
-                <div>
-                  <p>IP68</p>
-                  <p>Lorem isusie hihon mgahs hanjjs</p>
+              <div class="hiddenLeft grid grid-cols-3 gap-10">
+                <div class="">
+                  <p>1 Person</p>
+                  <p>Chỉ 1 người dùng và mọi người đều có thể kết nối.</p>
                 </div>
-                <div>
-                  <p>10 năm</p>
-                  <p>Lorem isusie hihon mgahs hanjjs</p>
+                <div class="">
+                  <p>No App</p>
+                  <p>Sản phẩm của IDConnect không cần dùng App.</p>
                 </div>
-                <div>
-                  <p>Update</p>
-                  <p>Lorem isusie hihon mgahs hanjjs</p>
+                <div class="">
+                  <p>No Battery</p>
+                  <p>Các sản phẩm của ID-Connect không dùng pin.</p>
                 </div>
               </div>
             </div>
@@ -315,7 +313,7 @@
                   dạng vật liệu, giấy, PVC, kim loại và cả Mạ vàng.
                 </p>
               </div>
-              <button>TRUY CẬP</button>
+              <button>SẮP RA MẮT</button>
             </div>
             <div class="item">
               <img src="/assets/images/prd2.png" alt="" />
@@ -326,7 +324,7 @@
                   Pet Tag, vừa dễ dàng tìm nếu đi lạc vừa chia sẻ cùng bạn bè.
                 </p>
               </div>
-              <button>TRUY CẬP</button>
+              <button>SẮP RA MẮT</button>
             </div>
             <div class="item">
               <img src="/assets/images/prd3.png" alt="" />
@@ -337,7 +335,7 @@
                   ai ưa tính sự tiện lợi thể hiện cá tính và năng động.
                 </p>
               </div>
-              <button>TRUY CẬP</button>
+              <button>SẮP RA MẮT</button>
             </div>
             <div class="item">
               <img src="/assets/images/prd4.png" alt="" />
@@ -348,7 +346,7 @@
                   lạc hành lý. đó là thẻ hành lý 4.0 của ID-Connect
                 </p>
               </div>
-              <button>TRUY CẬP</button>
+              <button>SẮP RA MẮT</button>
             </div>
             <div class="item">
               <img src="/assets/images/prd5.png" alt="" />
@@ -359,7 +357,7 @@
                   lạc với mọi người, đôi tác, khách hàng.
                 </p>
               </div>
-              <button>TRUY CẬP</button>
+              <button>SẮP RA MẮT</button>
             </div>
             <div class="item">
               <img src="/assets/images/prd6.png" alt="" />
@@ -370,7 +368,7 @@
                   quý khách vào ví da. (ảnh minh hoạ )
                 </p>
               </div>
-              <button>TRUY CẬP</button>
+              <button>SẮP RA MẮT</button>
             </div>
             <div class="item">
               <img src="/assets/images/prd7.png" alt="" />
@@ -381,7 +379,7 @@
                   bụi, tích hợp mạng xã hội và thông báo.
                 </p>
               </div>
-              <button>TRUY CẬP</button>
+              <button>SẮP RA MẮT</button>
             </div>
           </div>
         </section>
@@ -408,8 +406,8 @@
               </p>
               <button class="buy-btn">Mua Ngay</button>
             </div>
-            <div class="start-list flex flex-col w-[53%] hiddenRight">
-              <div class="flex mb-7 rounded-[20px] overflow-hidden">
+            <div class="start-list flex flex-col w-[53%]">
+              <div class="hiddenRight flex mb-7 rounded-[20px] overflow-hidden">
                 <div class="w-[52%]">
                   <span>1</span>
                   <p class="mb-2 font-medium text-[18px]">Kích hoạt</p>
@@ -422,7 +420,7 @@
                   <img src="/assets/images/start1.png" alt="" />
                 </div>
               </div>
-              <div class="flex mb-7 rounded-[20px] overflow-hidden">
+              <div class="hiddenRight flex mb-7 rounded-[20px] overflow-hidden">
                 <div class="w-[52%]">
                   <span>2</span>
                   <p class="mb-2 font-medium text-[18px]">Tuỳ Chỉnh</p>
@@ -435,7 +433,7 @@
                   <img src="/assets/images/start2.png" alt="" />
                 </div>
               </div>
-              <div class="flex mb-7 rounded-[20px] overflow-hidden">
+              <div class="hiddenRight flex mb-7 rounded-[20px] overflow-hidden">
                 <div class="w-[52%]">
                   <span>3</span>
                   <p class="mb-2 font-medium text-[18px]">Kết nối</p>
@@ -491,48 +489,48 @@
                 />
               </div>
             </div>
-            <div class="power-list grid grid-cols-3 gap-10 hiddenLeft">
-              <div>
+            <div class="power-list grid grid-cols-3 gap-10">
+              <div class="hiddenLeft">
                 <p class="text-[18px] font-medium">Giao diện UI/UX</p>
                 <p class="font-light">người dùng và website</p>
                 <img src="/assets/images/power1.png" alt="" />
               </div>
-              <div>
+              <div class="hiddenLeft">
                 <p class="text-[18px] font-medium">Công nghệ</p>
                 <p class="font-light">mạnh mẽ nhất hiện tại</p>
                 <img src="/assets/images/power2.png" alt="" />
               </div>
-              <div>
+              <div class="hiddenLeft">
                 <p class="text-[18px] font-medium">Tối ưu tốc độ</p>
                 <p class="font-light">gần như không độ trễ</p>
                 <img src="/assets/images/power3.png" alt="" />
               </div>
-              <div>
+              <div class="hiddenRight">
                 <p class="text-[18px] font-medium">Đa dạng sản phẩm</p>
                 <p class="font-light">người dùng và website</p>
                 <img src="/assets/images/power4.png" alt="" />
               </div>
-              <div>
+              <div class="hiddenRight">
                 <p class="text-[18px] font-medium">Tính năng mới</p>
                 <p class="font-light">được cập nhật liên tục</p>
                 <img src="/assets/images/power5.png" alt="" />
               </div>
-              <div>
+              <div class="hiddenRight">
                 <p class="text-[18px] font-medium">Đa quốc gia</p>
                 <p class="font-light">Vietnam, UK, US, China</p>
                 <img src="/assets/images/power6.png" alt="" />
               </div>
-              <div>
+              <div class="hiddenLeft">
                 <p class="text-[18px] font-medium">Đi đầu về chất liệu</p>
                 <p class="font-light">Tre, PVC, Vàng, ...</p>
                 <img src="/assets/images/power7.png" alt="" />
               </div>
-              <div>
+              <div class="hiddenLeft">
                 <p class="text-[18px] font-medium">Bào hành</p>
                 <p class="font-light">1 đổi 1 trong 1 năm</p>
                 <img src="/assets/images/power8.png" alt="" />
               </div>
-              <div>
+              <div class="hiddenLeft">
                 <p class="text-[18px] font-medium">Chi phí phù hợp</p>
                 <p class="font-light">đáp ứng mọi nhu cầu</p>
                 <img src="/assets/images/power9.png" alt="" />

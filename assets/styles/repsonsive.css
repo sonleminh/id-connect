@@ -44,7 +44,7 @@
     width: 100%;
   }
   .intro-ellipse {
-    top: -10%;
+    top: -10% !important;
   }
   .features-list {
     width: 90% !important;
@@ -180,15 +180,19 @@
     -webkit-text-fill-color: transparent;
   }
   .banner {
-    flex-direction: column;
-    margin-top: 60px;
+    margin-top: 96px;
   }
   .banner-content {
-    width: 100% !important;
+    width: 65% !important;
     margin-bottom: 30px;
+  }
+  .banner-content > div {
+    width: 100%;
   }
   .banner-content > div > h1 {
     width: 100%;
+    font-size: 26px;
+    line-height: 36px;
   }
   .store-btn {
     margin-top: 20px;
@@ -226,7 +230,7 @@
     width: 100%;
   }
   .intro-ellipse {
-    top: -10%;
+    top: -10% !important;
   }
   .features-list {
     width: 90% !important;
@@ -386,17 +390,19 @@
     -webkit-text-fill-color: transparent;
   }
   .banner {
-    flex-direction: column;
-    margin-top: 60px;
+    margin-top: 96px;
   }
   .banner-content {
-    width: 100% !important;
+    width: 65% !important;
     margin-bottom: 30px;
+  }
+  .banner-content > div {
+    width: 100%;
   }
   .banner-content > div > h1 {
     width: 100%;
-    font-size: 36px;
-    line-height: 40px;
+    font-size: 22px;
+    line-height: 32px;
   }
   .banner-content > div > p:last-child {
     font-size: 18px;
@@ -450,7 +456,7 @@
     width: 100%;
   }
   .intro-ellipse {
-    top: -10%;
+    top: -10% !important;
   }
   .features-list {
     width: 100% !important;
@@ -524,7 +530,6 @@
     font-size: 14px;
   }
   .pick {
-    /* flex-direction: column; */
     padding: 30px;
     margin-bottom: 50px;
   }
@@ -535,7 +540,6 @@
   }
   .pick > div {
     width: 100%;
-    /* flex-direction: column; */
   }
   .pick > div button {
     width: 100%;
@@ -544,7 +548,6 @@
     font-size: 15px;
   }
   .pick > div button:first-child {
-    /* margin-bottom: 20px; */
     margin-right: 10px;
   }
   .start {
@@ -662,21 +665,30 @@
     -webkit-text-fill-color: transparent;
   }
   .banner {
-    flex-direction: column;
-    margin-top: 60px;
+    margin-top: 96px;
   }
   .banner-content {
-    width: 100% !important;
+    width: 65% !important;
     margin-bottom: 30px;
+  }
+  .banner-content > div {
+    width: 100%;
   }
   .banner-content > div > h1 {
     width: 100%;
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .banner-desc {
+    margin-bottom: 10px;
+    font-size: 14px;
   }
   .banner-content > div > p:last-child {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .banner > div:last-child {
+    width: 35%;
   }
   .store-btn {
     margin-top: 20px;
@@ -726,7 +738,7 @@
     width: 100%;
   }
   .intro-ellipse {
-    top: -10%;
+    top: -20% !important;
   }
   .features-list {
     width: 100% !important;
