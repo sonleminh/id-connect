@@ -434,10 +434,21 @@ input:checked ~ .tab-content {
   margin-bottom: 10px;
 }
 
+.follow {
+  background: linear-gradient(to right, #73e0a9 0%, #5b68df 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
 .socials {
   background: linear-gradient(to right, #8176af 0%, #c0b7e8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.socials li i {
+  font-size: 22px;
 }
 
 .hiddenLeft,
@@ -449,7 +460,7 @@ input:checked ~ .tab-content {
 .showLeft,
 .showRight {
   opacity: 1;
-} 
+}
 
 .fadeInLeft {
   animation: fadeInLeft 2s;
@@ -464,7 +475,7 @@ input:checked ~ .tab-content {
 @keyframes fadeInLeft {
   0% {
     transform: translate3d(-50%, 0, 0);
-    opacity: 0;
+    /* opacity: 0; */
   }
   100% {
     opacity: 1;
@@ -474,7 +485,7 @@ input:checked ~ .tab-content {
 
 @keyframes fadeInRight {
   0% {
-    opacity: 0;
+    /* opacity: 0; */
     transform: translate3d(50%, 0, 0);
   }
   100% {
