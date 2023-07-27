@@ -184,7 +184,6 @@ header button {
 
 .pick {
   position: relative;
-  /* aspect-ratio: 16/9; */
 }
 
 .pick::before {
@@ -450,7 +449,7 @@ input:checked ~ .tab-content {
 .showLeft,
 .showRight {
   opacity: 1;
-}
+} 
 
 .fadeInLeft {
   animation: fadeInLeft 2s;
@@ -460,17 +459,6 @@ input:checked ~ .tab-content {
 .fadeInRight {
   animation: fadeInRight 2s;
   animation-direction: alternate;
-}
-
-.delay-1 {
-  visibility: visible;
-  animation-duration: 3000ms;
-  animation-delay: 300ms;
-}
-.delay-2 {
-  visibility: visible;
-  animation-duration: 3000ms;
-  animation-delay: 900ms;
 }
 
 @keyframes fadeInLeft {
