@@ -49,7 +49,7 @@
   .features-list {
     width: 90% !important;
   }
-  .features-list > div {
+  /* .features-list > div {
     margin: 15px auto;
   }
   .features-list > div > div {
@@ -57,7 +57,7 @@
   }
   .features-list > div > div > p:last-child {
     color: #cbcfd8;
-  }
+  } */
   .why > div {
     flex-direction: column;
   }
@@ -155,6 +155,14 @@
   .footer-top > div:nth-child(3) {
     width: 18% !important;
   }
+  .slide > p:last-child {
+    line-height: 20px;
+  }
+  .slider,
+  .slider3 {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -234,15 +242,6 @@
   }
   .features-list {
     width: 90% !important;
-  }
-  .features-list > div {
-    margin: 15px auto;
-  }
-  .features-list > div > div {
-    height: 130px;
-  }
-  .features-list > div > div > p:last-child {
-    color: #cbcfd8;
   }
   .why > div {
     flex-direction: column;
@@ -368,6 +367,23 @@
     margin-right: 15px;
     font-size: 36px;
   }
+  .slide {
+    margin: 0 12px;
+  }
+  .slide > p:first-child {
+    font-size: 16px;
+  }
+  .slide > p:last-child {
+    font-size: 14px;
+  }
+  .slider,
+  .slider3 {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .slider2 {
+    width: 70%;
+  }
 }
 @media (min-width: 640px) and (max-width: 767px) {
   header {
@@ -460,16 +476,6 @@
   }
   .features-list {
     width: 100% !important;
-  }
-  .features-list > div {
-    margin: 15px auto;
-    gap: 25px;
-  }
-  .features-list > div > div {
-    height: 130px;
-  }
-  .features-list > div > div > p:last-child {
-    color: #cbcfd8;
   }
   .why > div {
     flex-direction: column;
@@ -614,6 +620,9 @@
   .power-list > div {
     width: 80%;
   }
+  .nav {
+    height: 300px;
+  }
   .question {
     padding: 5% !important;
     margin-bottom: 50px !important;
@@ -638,6 +647,9 @@
   }
   .socials > li > i {
     font-size: 26px;
+  }
+  .slider2 {
+    width: 50%;
   }
 }
 
@@ -744,20 +756,7 @@
     width: 100% !important;
   }
   .features-list > div {
-    margin: 15px auto;
-    gap: 12px;
-  }
-  .features-list > div > div {
-    height: 90px;
-    padding: 10px;
-  }
-  .features-list > div > div > p:first-child {
-    font-size: 15px;
-  }
-  .features-list > div > div > p:last-child {
-    font-size: 12px;
-    line-height: 15px;
-    color: #cbcfd8;
+    margin-bottom: 20px;
   }
   .why > div {
     flex-direction: column;
@@ -909,6 +908,9 @@
   .power-list > div {
     width: 80%;
   }
+  .nav {
+    height: 250px;
+  }
   .question {
     padding: 5% !important;
     margin-bottom: 50px !important;
@@ -933,5 +935,28 @@
   }
   .socials > li > i {
     font-size: 26px;
+  }
+  .slide {
+    height: 80px !important;
+    padding: 10px;
+    margin: 0 12px;
+  }
+  .slide > p:first-child {
+    font-size: 13px;
+  }
+  .slide > p:last-child {
+    font-size: 12px;
+    line-height: 15px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  .slider,
+  .slider3 {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .slider2 {
+    width: 60%;
   }
 }

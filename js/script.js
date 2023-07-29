@@ -204,3 +204,126 @@ function onWindowResize() {
   camera.updateProjectionMatrix();
   renderer.setSize(container.clientWidth, container.clientHeight);
 }
+
+// Text Effect
+
+window.onload = function () {
+  Particles.init({
+    selector: '.background',
+  });
+};
+const particles = Particles.init({
+  selector: '.background',
+  color: ['#03dac6', '#ff0266', '#000000'],
+  connectParticles: true,
+  responsive: [
+    {
+      breakpoint: 768,
+      options: {
+        color: ['#faebd7', '#03dac6', '#ff0266'],
+        maxParticles: 43,
+        connectParticles: false,
+      },
+    },
+  ],
+});
+
+// Slider
+
+$(document).ready(function () {
+  $('.slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    rtl: true,
+    infinity: true,
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+          centerPadding: '80px',
+        },
+      },
+      {
+        breakpoint: 639,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
+  });
+});
+
+$(document).ready(function () {
+  $('.slider2').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    infinity: true,
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          centerPadding: '80px',
+        },
+      },
+      {
+        breakpoint: 639,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+});
+
+$(document).ready(function () {
+  $('.slider3').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    rtl: true,
+    infinity: true,
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+          centerPadding: '80px',
+        },
+      },
+      {
+        breakpoint: 639,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
+  });
+});

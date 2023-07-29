@@ -22,6 +22,12 @@
     <link rel="stylesheet" href="assets/styles/main.css" />
     <link rel="stylesheet" href="assets/styles/product-slider.css" />
     <link rel="stylesheet" href="assets/styles/repsonsive.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
@@ -214,7 +220,7 @@
               <p>
                 Các sản phẩm của IDConnect giúp giải quyết các vấn đề mà sản
                 phẩm truyền thống đang gặp phải như chi phí, thiết kế, dữ liệu,
-                kết nối, chất liệu, và độ bền. bảo vệ môi trường.
+                kết nối, chất liệu, và độ bền.
               </p>
             </div>
           </div>
@@ -227,49 +233,136 @@
             <p class="mb-10 text-center text-[28px] font-bold hiddenLeft">
               TÍNH NĂNG NỔI BẬT
             </p>
-            <div class="features-list w-[70%] mx-auto">
-              <div class="hiddenLeft grid grid-cols-3 gap-10">
-                <div class="">
+            <div class="features-list w-[84%] mx-auto">
+              <div class="slider" dir="rtl">
+                <div class="slide">
                   <p>IP68</p>
                   <p>Khả năng kháng nước, chống bụi chuẩn IP68</p>
                 </div>
-                <div class="">
+                <div class="slide">
                   <p>Công nghệ</p>
                   <p>Sở hữu công nghệ và hệ sinh thái toàn diện</p>
                 </div>
-                <div class="">
+                <div class="slide">
                   <p>Customize</p>
                   <p>
                     Khả năng tuỳ biến, cá nhân hoá thiết kế, giao diện, vật liệu
                   </p>
                 </div>
-              </div>
-              <div
-                class="hiddenRight w-[80%] mx-auto my-10 grid grid-cols-2 gap-[50px]"
-              >
-                <div class="">
-                  <p>Real-Time</p>
-                  <p>Khả năng cập nhật dữ liệu theo thời gian thực.</p>
+                <div class="slide">
+                  <p>1 Person</p>
+                  <p>Chỉ 1 người dùng và mọi người đều có thể kết nối.</p>
                 </div>
-                <div class="">
+                <div class="slide">
                   <p>Android & IOS</p>
                   <p>
                     Sử dụng tốt trên mọi loại điện thoại bao gồm IOS và Android.
                   </p>
                 </div>
+                <div class="slide">
+                  <p>No APP</p>
+                  <p>Sản phẩm của IDConnect không cần dùng App.</p>
+                </div>
+                <div class="slide">
+                  <p>Free Update</p>
+                  <p>Miễn phí nâng cấp theo thời gian, tự động cập nhật.</p>
+                </div>
+                <div class="slide">
+                  <p>NFC & Contactless</p>
+                  <p>
+                    Sử dụng chip NFC và công nghệ giao tiếp tầm gần mới nhất
+                  </p>
+                </div>
               </div>
-              <div class="hiddenLeft grid grid-cols-3 gap-10">
-                <div class="">
+              <div class="slider2 w-[70%] mx-auto">
+                <div class="slide">
+                  <p>Real-Time</p>
+                  <p>Khả năng cập nhật dữ liệu theo thời gian thực.</p>
+                </div>
+                <div class="slide">
+                  <p>Android & IOS</p>
+                  <p>
+                    Sử dụng tốt trên mọi loại điện thoại bao gồm IOS và Android.
+                  </p>
+                </div>
+                <div class="slide">
+                  <p>Videos & File</p>
+                  <p>Cho người dùng đưa file và video, hình ảnh vào thiết bị</p>
+                </div>
+                <div class="slide">
+                  <p>Contact Information</p>
+                  <p>Tuỳ chỉnh thông tin liên lạc, thông tin cá nhân</p>
+                </div>
+                <div class="slide">
+                  <p>Social Media</p>
+                  <p>
+                    Tích hợp mọi đường dẫn từ mọi mạng xã hội trên thế giới.
+                  </p>
+                </div>
+                <div class="slide">
+                  <p>Measurable</p>
+                  <p>Đo lường & kiểm tra được lượng traffic từ mọi kênh.</p>
+                </div>
+                <div class="slide">
+                  <p>Links</p>
+                  <p>
+                    Chèn được mọi link trên mọi nền tàng có đường dẫn (Links)
+                  </p>
+                </div>
+                <div class="slide">
+                  <p>App</p>
+                  <p>Tích hợp ứng dụng của cá nhân/doanh nghiệp.</p>
+                </div>
+                <div class="slide">
+                  <p>Download & Save</p>
+                  <p>
+                    Khả năng tải xuống và lưu lại như danh bạ, tài liệu,
+                    photos...
+                  </p>
+                </div>
+              </div>
+              <div class="slider3" dir="rtl">
+                <div class="slide">
                   <p>1 Person</p>
                   <p>Chỉ 1 người dùng và mọi người đều có thể kết nối.</p>
                 </div>
-                <div class="">
+                <div class="slide">
                   <p>No App</p>
                   <p>Sản phẩm của IDConnect không cần dùng App.</p>
                 </div>
-                <div class="">
+                <div class="slide">
                   <p>No Battery</p>
                   <p>Các sản phẩm của ID-Connect không dùng pin.</p>
+                </div>
+                <div class="slide">
+                  <p>Real-Time</p>
+                  <p>Khả năng cập nhật dữ liệu theo thời gian thực.</p>
+                </div>
+                <div class="slide">
+                  <p>Customize</p>
+                  <p>
+                    Khả năng tuỳ biến, cá nhân hoá thiết kế, giao diện, vật liệu
+                  </p>
+                </div>
+                <div class="slide">
+                  <p>Google Map</p>
+                  <p>Định vị và gởi dữ liệu về điện thoại của bạn.</p>
+                </div>
+                <div class="slide">
+                  <p>No Monthly Cost</p>
+                  <p>Không phí hàng tháng, mua 1 lần dùng mãi mãi.</p>
+                </div>
+                <div class="slide">
+                  <p>No Battery</p>
+                  <p>Các sản phẩm của ID-Connect không dùng pin.</p>
+                </div>
+                <div class="slide">
+                  <p>Security</p>
+                  <p>Khả năng bảo bật, khoá thẻ từ xa, ẩn thông tin cá nhân.</p>
+                </div>
+                <div class="slide">
+                  <p>Publish</p>
+                  <p>Show dự án, công việc, sản phẩm tới khách hàng của bạn.</p>
                 </div>
               </div>
             </div>
@@ -443,7 +536,7 @@
                   </p>
                 </div>
                 <div class="w-[48%]">
-                  <img src="/assets/images/start32.png" alt="" />
+                  <img src="/assets/images/start3.png" alt="" />
                 </div>
               </div>
             </div>
@@ -537,6 +630,26 @@
               </div>
             </div>
           </div>
+        </div>
+        <section class="nav mb-[70px]">
+          <canvas class="background"></canvas>
+          <h1>ID Connect</h1>
+          <h3 class="span loader">
+            <span class="m">I</span><span class="m">n</span
+            ><span class="m">f</span><span class="m">i</span
+            ><span class="m">n</span><span class="m">i</span
+            ><span class="m">t</span><span class="m">y</span
+            ><span class="m">&nbsp;</span><span class="m">o</span
+            ><span class="m">f</span><span class="m">&nbsp;</span
+            ><span class="m">T</span><span class="m">e</span
+            ><span class="m">c</span><span class="m">h</span
+            ><span class="m">n</span><span class="m">o</span
+            ><span class="m">l</span><span class="m">o</span
+            ><span class="m">g</span><span class="m">i</span
+            ><span class="m">e</span><span class="m">s</span>
+          </h3>
+        </section>
+        <div class="container">
           <div class="question px-[17%] mb-[70px]">
             <p class="text-center mb-10 hiddenLeft">Câu hỏi thường gặp !!</p>
             <div class="answers-list hiddenRight">
@@ -728,6 +841,18 @@
     <script src="https://cdn.jsdelivr.net/npm/three@0.121.1/build/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.121.1/examples/js/controls/OrbitControls.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+    <!-- <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script> -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
     <script src="/js/script.js"></script>
     <script src="/js/main.js"></script>
   </body>
