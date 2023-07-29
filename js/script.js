@@ -236,7 +236,10 @@ $(document).ready(function () {
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 0,
+    speed: 3000,
+    pauseOnHover: false,
+    cssEase: 'linear',
     rtl: true,
     infinity: true,
     responsive: [
@@ -269,7 +272,10 @@ $(document).ready(function () {
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 0,
+    speed: 3000,
+    pauseOnHover: false,
+    cssEase: 'linear',
     infinity: true,
     responsive: [
       {
@@ -301,7 +307,10 @@ $(document).ready(function () {
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 0,
+    speed: 3000,
+    pauseOnHover: false,
+    cssEase: 'linear',
     rtl: true,
     infinity: true,
     responsive: [
