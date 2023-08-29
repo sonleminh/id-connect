@@ -842,6 +842,27 @@
   .pick > div button:first-child {
     margin-bottom: 20px;
   }
+  .how > div {
+    flex-direction: column;
+  }
+  .how > div > div:first-child {
+    width: 100%;
+  }
+  .how > div > div > p:first-child {
+    font-size: 26px;
+  }
+  .how > div > div > p:last-child {
+    font-size: 15px;
+  }
+  .how > div > div > p:last-child img {
+    margin-left: 10px;
+  }
+  .how > div > div:last-child {
+    width: 100%;
+  }
+  .how > div > div:last-child p {
+    font-size: 15px;
+  }
   .start {
     flex-direction: column;
     padding: 0 !important;
@@ -912,6 +933,12 @@
   }
   .nav {
     height: 250px;
+  }
+  .nav h1 {
+    font-size: 24px;
+  }
+  .nav h3 span {
+    font-size: 18px;
   }
   .question {
     padding: 5% !important;
