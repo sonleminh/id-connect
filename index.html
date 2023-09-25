@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aldrich&family=Mulish:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -20,7 +26,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
     />
     <link rel="stylesheet" href="assets/styles/main.css" />
-    <link rel="stylesheet" href="assets/styles/product-slider.css" />
     <link rel="stylesheet" href="assets/styles/repsonsive.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
     <link
@@ -32,34 +37,32 @@
   </head>
   <body>
     <div class="app relative">
-      <header
-        class="fixed top-0 flex justify-between items-center w-full h-[96px] pr-[2%] pl-[6%] text-white text-[14px] font-medium z-[69]"
-      >
-        <div class="flex items-center w-[30%]">
-          <img
-            src="/assets/images/logo.png"
-            alt=""
-            class="logo w-[50px] mr-5"
-          />
-          <div class="search-input">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" class="w-full pl-4" />
+      <header class="fixed top-0 w-full z-[69]">
+        <div
+          class="container h-[96px] flex justify-between items-center text-white text-[14px] font-medium"
+        >
+          <div class="flex items-center">
+            <img
+              src="/assets/images/logo.png"
+              alt=""
+              class="logo w-[69px] mr-5"
+            />
+            <i
+              id="mobile-bar"
+              class="fa-solid fa-bars mobile-btn hidden"
+              onclick="handleBarClick()"
+            ></i>
           </div>
-          <i
-            id="mobile-bar"
-            class="fa-solid fa-bars mobile-btn hidden"
-            onclick="handleBarClick()"
-          ></i>
-        </div>
-        <div class="header-menu flex items-center">
-          <ul class="flex">
-            <li>About</li>
-            <li>Sản Phẩm</li>
-            <li>Hướng Dẫn</li>
-            <li>Chính Sách</li>
-          </ul>
-          <button class="login-btn">Đăng Nhập</button
-          ><button class="shop-btn">Shop Now</button>
+          <div class="header-menu flex items-center">
+            <ul class="flex">
+              <li>Giới Thiệu</li>
+              <li>Sản Phẩm</li>
+              <li>Hướng Dẫn</li>
+              <li>Hợp tác</li>
+            </ul>
+            <button class="login-btn">Đăng Nhập</button
+            ><button class="shop-btn">Shop Now</button>
+          </div>
         </div>
       </header>
       <div
@@ -123,567 +126,433 @@
           >
         </ul>
       </div>
-      <main class="overflow-hidden">
-        <div class="banner flex justify-between">
-          <div
-            class="banner-content flex flex-col justify-center items-start w-[50%] pl-[6%] hiddenLeft"
-          >
-            <div class="w-[84%]">
-              <h1 class="w-[60%] mb-3 text-[48px] font-bold leading-[64px]">
-                IDCONNECT<br />ECO-System
-              </h1>
-              <p class="banner-desc mb-5">
-                IDConnect là hệ sinh thái đa dạng các sản phẩm công nghệ bao gồm
-                : ID-Card, ID-Pet, ID-Sticker, ID-Wristband, ID-Badge,...
-              </p>
-              <p class="text-[28px] leading-10">
-                GIÚP NGƯỜI DÙNG KẾT NỐI NHANH NHẤT CHỈ 1S.
-              </p>
-            </div>
-            <button class="store-btn">Đến cửa hàng</button>
+      <main class="relative pt-[96px] overflow-hidden">
+        <img
+          src="/assets/images/blue-bg.png"
+          alt=""
+          class="absolute top-0 right-0"
+        />
+
+        <div class="container">
+          <div class="banner relative mb-[60px]">
+            <p class="banner-title flex items-center text-[110px] font-bold">
+              <span>IDC</span>
+              <img
+                src="/assets/images/banner-title.png"
+                alt=""
+                class="w-[100px] h-[100px]"
+              /><span>NNECT</span>
+            </p>
+            <span
+              class="banner-sub pl-[15%] text-[95px] font-semibold leading-[70px]"
+              >ECO-System</span
+            >
+            <p class="banner-desc w-[63%] pl-[15%] mt-[60px] text-[20px]">
+              IDConnect là hệ sinh thái đa dạng các sản phẩm công nghệ bao gồm:
+              <span class="text-[#85FFE0]"
+                >ID-Card, ID-Pet, ID-Sticker, ID-Wristband, ID-Badge,...</span
+              >
+              giúp người dùng kết nối nhanh nhất chỉ 1s
+            </p>
+            <img
+              src="/assets/images/banner-img.png"
+              alt=""
+              class="absolute top-[10%] right-0 z-[-1]"
+            />
           </div>
-          <div class="relative w-[45%]">
-            <img
-              src="/assets/images/banner-ball.png"
-              alt=""
-              class="hiddenRight ml-auto"
-            />
-            <img
-              src="/assets/images/banner-ellipse.png"
-              alt=""
-              class="banner-ellipse absolute top-[0%] left-[-50%] max-w-[150%] w-[150%] z-[-2]"
-            />
-            <img
-              src="/assets/images/vector-banner1.png"
-              alt=""
-              class="banner-bg absolute left-[0] bottom-[0] w-full z-[-1]"
-            />
-            <img
-              src="/assets/images/vector-banner2.png"
-              alt=""
-              class="banner-bg absolute left-[40%] bottom-[0] w-[50%] z-[-1]"
-            />
+          <div class="banner-info flex justify-between items-center mb-[120px]">
+            <img src="/assets/images/banner-info.png" alt="" />
+            <div class="w-[70%] px-8 py-6 flex justify-between">
+              <div>
+                <img src="/assets/images/banner-info1.png" alt="" />
+                <p class="banner__info--title">Văn phòng đa quốc gia</p>
+                <p class="banner__info--desc">Vietnam, UK, US, China</p>
+              </div>
+              <div>
+                <img src="/assets/images/banner-info2.png" alt="" />
+                <p class="banner__info--title">Hỗ Trợ 24/7</p>
+                <p class="banner__info--desc">Vietnam, UK, US, China</p>
+              </div>
+              <div>
+                <img src="/assets/images/banner-info3.png" alt="" />
+                <p class="banner__info--title">Hợp Tác</p>
+                <p class="banner__info--desc">idconnect.icu@gmail.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="intro mb-[100px]">
+            <div class="intro-content flex justify-between mb-10">
+              <div class="w-[30%] hiddenLeft">
+                <p class="mb-4 text-[40px] font-bold leading-7">GIỚI THIỆU</p>
+                <b class="text-[30px]"> VỀ IDCONNECT </b>
+              </div>
+              <div class="hiddenRight w-[65%] text-justify text-[18px]">
+                <p class="mb-1">
+                  IDConnect là hệ sinh thái toàn diện về kết nối và giao tiếp
+                  trên mọi phương diện thông qua đa dạng sản phẩm, chuyển đổi từ
+                  các sản phẩm vật lý thông thường trở nên thông minh với chi
+                  phí không đổi so với sản phẩm truyền thống cùng với chế độ bảo
+                  hành 3 năm chỉ có tại IDConnect.
+                </p>
+                <p>
+                  Ngoài ra, còn chống nước, bụi, tích hợp mạng xã hội, tracking
+                  trên google map, thanh toán online cùng nhiều tính năng khác
+                  đặc biệt cập nhật dữ liệu theo thời gian thực.và hoạt động
+                  được trên toàn thế giới (có tuỳ chọn ngôn ngữ)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="features mb-[120px] text-center">
+          <b
+            class="features-title mb-10 text-center text-[40px] font-bold hiddenLeft"
+          >
+            TÍNH NĂNG NỔI BẬT
+          </b>
+          <div class="features-list">
+            <div class="slider" dir="rtl">
+              <div class="slide">
+                <p>1 Person</p>
+                <p>Chỉ 1 người dùng và mọi người đều có thể kết nối.</p>
+              </div>
+              <div class="slide">
+                <p>Android & IOS</p>
+                <p>
+                  Sử dụng tốt trên mọi loại điện thoại bao gồm IOS và Android.
+                </p>
+              </div>
+              <div class="slide">
+                <p>IP68</p>
+                <p>Khả năng kháng nước, chống bụi chuẩn IP68</p>
+              </div>
+              <div class="slide">
+                <p>Free Update</p>
+                <p>Miễn phí nâng cấp theo thời gian, tự động cập nhật.</p>
+              </div>
+              <div class="slide">
+                <p>NFC & Contactless</p>
+                <p>Sử dụng chip NFC và công nghệ giao tiếp tầm gần mới nhất</p>
+              </div>
+              <div class="slide">
+                <p>Customize</p>
+                <p>
+                  Khả năng tuỳ biến, cá nhân hoá thiết kế, giao diện, vật liệu
+                </p>
+              </div>
+            </div>
+            <div class="slider2">
+              <div class="slide">
+                <p>Videos & File</p>
+                <p>Cho người dùng đưa file và video, hình ảnh vào thiết bị</p>
+              </div>
+              <div class="slide">
+                <p>No APP</p>
+                <p>Sản phẩm của IDConnect không cần dùng App.</p>
+              </div>
+              <div class="slide">
+                <p>Công nghệ</p>
+                <p>Sở hữu công nghệ và hệ sinh thái toàn diện</p>
+              </div>
+              <div class="slide">
+                <p>Real-Time</p>
+                <p>Khả năng cập nhật dữ liệu theo thời gian thực.</p>
+              </div>
+              <div class="slide">
+                <p>Contact Information</p>
+                <p>Tuỳ chỉnh thông tin liên lạc, thông tin cá nhân</p>
+              </div>
+              <div class="slide">
+                <p>Download & Save</p>
+                <p>
+                  Khả năng tải xuống và lưu lại như danh bạ, tài liệu, photos...
+                </p>
+              </div>
+            </div>
+            <div class="slider3" dir="rtl">
+              <div class="slide">
+                <p>Social Media</p>
+                <p>Tích hợp mọi đường dẫn từ mọi mạng xã hội trên thế giới.</p>
+              </div>
+              <div class="slide">
+                <p>Measurable</p>
+                <p>Đo lường & kiểm tra được lượng traffic từ mọi kênh.</p>
+              </div>
+              <div class="slide">
+                <p>Links</p>
+                <p>Chèn được mọi link trên mọi nền tàng có đường dẫn (Links)</p>
+              </div>
+              <div class="slide">
+                <p>App</p>
+                <p>Tích hợp ứng dụng của cá nhân/doanh nghiệp.</p>
+              </div>
+              <div class="slide">
+                <p>Google Map</p>
+                <p>Định vị và gởi dữ liệu về điện thoại của bạn.</p>
+              </div>
+              <div class="slide">
+                <p>No Monthly Cost</p>
+                <p>Không phí hàng tháng, mua 1 lần dùng mãi mãi.</p>
+              </div>
+              <div class="slide">
+                <p>No Battery</p>
+                <p>Các sản phẩm của ID-Connect không dùng pin.</p>
+              </div>
+              <div class="slide">
+                <p>Security</p>
+                <p>Khả năng bảo bật, khoá thẻ từ xa, ẩn thông tin cá nhân.</p>
+              </div>
+              <div class="slide">
+                <p>Publish</p>
+                <p>Show dự án, công việc, sản phẩm tới khách hàng của bạn.</p>
+              </div>
+            </div>
           </div>
         </div>
         <div class="container">
-          <div
-            class="banner-info flex w-full px-7 py-7 mb-[70px] rounded-[100px] hiddenLeft"
-          >
-            <div class="flex border-r-[1px] border-[#5C5578]">
-              <img src="/assets/images/location.png" alt="" />
-              <div>
-                <p>Văn phòng đa quốc gia</p>
-                <p>Vietnam, UK, US, China</p>
+          <div class="why mb-[100px]">
+            <div class="flex justify-between mb-10">
+              <div class="w-[40%] hiddenLeft">
+                <p class="mb-4 text-[40px] font-bold leading-7">WHY BUILD</p>
+                <b class="why-sub text-[30px]">WITH IDCONNECT</b>
               </div>
-            </div>
-            <div class="flex border-r-[1px] border-[#5C5578]">
-              <img src="/assets/images/phone-call.png" alt="" />
-              <div>
-                <p>Hỗ Trợ 24/7</p>
-                <p>Tổng đài miễn phí</p>
-              </div>
-            </div>
-            <div class="flex">
-              <img src="/assets/images/people.png" alt="" />
-              <div>
-                <p>Hợp Tác</p>
-                <p>idconnect.icon@gmail.com</p>
+              <div class="w-[60%] text-justify hiddenRight">
+                <p class="text-[18px]">
+                  Nhận thấy các sản phẩm truyền thống còn nhiều hạn chế (giá
+                  tiền, tính năng, chất liệu,...) và đã lỗi thời cũng như nhu
+                  cầu kết nối của mọi người ngày càng tăng trong thời đại kỹ
+                  thuật số hôm nay, chúng tôi ra mắt những dòng sản phẩm giúp
+                  giải quyết & cải thiện những vấn đề mà các sản phẩm truyền
+                  thống gặp phải : như yếu tố công nghệ tích hợp, dữ liệu đám
+                  mây, giao tiếp 1 chạm, tìm vật dụng thất lạc, chống nước và
+                  bảo hành toàn diện.
+                </p>
               </div>
             </div>
           </div>
         </div>
-        <div class="intro relative px-[6%]">
-          <img
-            src="/assets/images/intro-ellipse.png"
-            alt=""
-            class="intro-ellipse absolute top-[-170%] left-[0] z-[-1]"
-          />
-          <div class="intro-content flex justify-between items-center mb-10">
-            <div class="w-[40%] hiddenLeft">
-              <p class="text-[28px] font-bold leading-7">GIỚI THIỆU</p>
-              <p class="flex items-center text-[30px] font-light">
-                VỀ IDCONNECT
-                <img
-                  src="/assets/images/intro-arrow.png"
-                  alt=""
-                  class="h-[65px] ml-10"
-                />
-              </p>
-            </div>
-            <div class="w-[60%] hiddenRight">
-              <p class="mb-1">
-                IDConnect là hệ sinh thái toàn diện về kết nối và giao tiếp trên
-                mọi phương diện thông qua đa dạng sản phẩm, chuyển đổi từ các
-                sản phẩm vật lý thông thường trở nên thông minh với chi phí
-                không đổi so với sản phẩm truyền thống cùng với chế độ bảo hành
-                3 năm chỉ có tại IDConnect.
-              </p>
-              <p>
-                Ngoài ra, còn chống nước, bụi, tích hợp mạng xã hội, tracking
-                trên google map, thanh toán online cùng nhiều tính năng khác đặc
-                biệt cập nhật dữ liệu theo thời gian thực.và hoạt động được trên
-                toàn thế giới (có tuỳ chọn ngôn ngữ)
-              </p>
-            </div>
-          </div>
-          <img
-            src="/assets/images/feature-ellipse.png"
-            alt=""
-            class="absolute top-[-120%] right-[0] z-[-1]"
-          />
-          <div class="features mb-[70px]">
-            <p class="mb-10 text-center text-[28px] font-bold hiddenLeft">
-              TÍNH NĂNG NỔI BẬT
-            </p>
-            <div class="features-list w-[84%] mx-auto">
-              <div class="slider" dir="rtl">
-                <div class="slide">
-                  <p>IP68</p>
-                  <p>Khả năng kháng nước, chống bụi chuẩn IP68</p>
-                </div>
-                <div class="slide">
-                  <p>Công nghệ</p>
-                  <p>Sở hữu công nghệ và hệ sinh thái toàn diện</p>
-                </div>
-                <div class="slide">
-                  <p>Customize</p>
-                  <p>
-                    Khả năng tuỳ biến, cá nhân hoá thiết kế, giao diện, vật liệu
-                  </p>
-                </div>
-                <div class="slide">
-                  <p>1 Person</p>
-                  <p>Chỉ 1 người dùng và mọi người đều có thể kết nối.</p>
-                </div>
-                <div class="slide">
-                  <p>Android & IOS</p>
-                  <p>
-                    Sử dụng tốt trên mọi loại điện thoại bao gồm IOS và Android.
-                  </p>
-                </div>
-                <div class="slide">
-                  <p>No APP</p>
-                  <p>Sản phẩm của IDConnect không cần dùng App.</p>
-                </div>
-                <div class="slide">
-                  <p>Free Update</p>
-                  <p>Miễn phí nâng cấp theo thời gian, tự động cập nhật.</p>
-                </div>
-                <div class="slide">
-                  <p>NFC & Contactless</p>
-                  <p>
-                    Sử dụng chip NFC và công nghệ giao tiếp tầm gần mới nhất
-                  </p>
-                </div>
-              </div>
-              <div class="slider2 w-[70%] mx-auto">
-                <div class="slide">
-                  <p>Real-Time</p>
-                  <p>Khả năng cập nhật dữ liệu theo thời gian thực.</p>
-                </div>
-                <div class="slide">
-                  <p>Android & IOS</p>
-                  <p>
-                    Sử dụng tốt trên mọi loại điện thoại bao gồm IOS và Android.
-                  </p>
-                </div>
-                <div class="slide">
-                  <p>Videos & File</p>
-                  <p>Cho người dùng đưa file và video, hình ảnh vào thiết bị</p>
-                </div>
-                <div class="slide">
-                  <p>Contact Information</p>
-                  <p>Tuỳ chỉnh thông tin liên lạc, thông tin cá nhân</p>
-                </div>
-                <div class="slide">
-                  <p>Social Media</p>
-                  <p>
-                    Tích hợp mọi đường dẫn từ mọi mạng xã hội trên thế giới.
-                  </p>
-                </div>
-                <div class="slide">
-                  <p>Measurable</p>
-                  <p>Đo lường & kiểm tra được lượng traffic từ mọi kênh.</p>
-                </div>
-                <div class="slide">
-                  <p>Links</p>
-                  <p>
-                    Chèn được mọi link trên mọi nền tàng có đường dẫn (Links)
-                  </p>
-                </div>
-                <div class="slide">
-                  <p>App</p>
-                  <p>Tích hợp ứng dụng của cá nhân/doanh nghiệp.</p>
-                </div>
-                <div class="slide">
-                  <p>Download & Save</p>
-                  <p>
-                    Khả năng tải xuống và lưu lại như danh bạ, tài liệu,
-                    photos...
-                  </p>
-                </div>
-              </div>
-              <div class="slider3" dir="rtl">
-                <div class="slide">
-                  <p>1 Person</p>
-                  <p>Chỉ 1 người dùng và mọi người đều có thể kết nối.</p>
-                </div>
-                <div class="slide">
-                  <p>No App</p>
-                  <p>Sản phẩm của IDConnect không cần dùng App.</p>
-                </div>
-                <div class="slide">
-                  <p>No Battery</p>
-                  <p>Các sản phẩm của ID-Connect không dùng pin.</p>
-                </div>
-                <div class="slide">
-                  <p>Real-Time</p>
-                  <p>Khả năng cập nhật dữ liệu theo thời gian thực.</p>
-                </div>
-                <div class="slide">
-                  <p>Customize</p>
-                  <p>
-                    Khả năng tuỳ biến, cá nhân hoá thiết kế, giao diện, vật liệu
-                  </p>
-                </div>
-                <div class="slide">
-                  <p>Google Map</p>
-                  <p>Định vị và gởi dữ liệu về điện thoại của bạn.</p>
-                </div>
-                <div class="slide">
-                  <p>No Monthly Cost</p>
-                  <p>Không phí hàng tháng, mua 1 lần dùng mãi mãi.</p>
-                </div>
-                <div class="slide">
-                  <p>No Battery</p>
-                  <p>Các sản phẩm của ID-Connect không dùng pin.</p>
-                </div>
-                <div class="slide">
-                  <p>Security</p>
-                  <p>Khả năng bảo bật, khoá thẻ từ xa, ẩn thông tin cá nhân.</p>
-                </div>
-                <div class="slide">
-                  <p>Publish</p>
-                  <p>Show dự án, công việc, sản phẩm tới khách hàng của bạn.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="why px-[6%]">
-          <div class="flex justify-between items-center mb-10">
-            <div class="w-[40%] hiddenLeft">
-              <p class="text-[28px] font-bold leading-7">WHY BUILD</p>
-              <p class="flex items-center text-[30px] font-light">
-                WITH IDCONNECT
-                <img
-                  src="/assets/images/intro-arrow.png"
-                  alt=""
-                  class="h-[65px] ml-10"
-                />
-              </p>
-            </div>
-            <div class="w-[60%] text-justify hiddenRight">
-              <p>
-                Nhận thấy các sản phẩm truyền thống còn nhiều hạn chế (giá tiền,
-                tính năng, chất liệu,...) và đã lỗi thời cũng như nhu cầu kết
-                nối của mọi người ngày càng tăng trong thời đại kỹ thuật số hôm
-                nay, chúng tôi ra mắt những dòng sản phẩm giúp giải quyết & cải
-                thiện những vấn đề mà các sản phẩm truyền thống gặp phải : như
-                yếu tố công nghệ tích hợp, dữ liệu đám mây, giao tiếp 1 chạm,
-                tìm vật dụng thất lạc, chống nước và bảo hành toàn diện.
-              </p>
-            </div>
-          </div>
-        </div>
-        <section class="game-section px-[6%]">
-          <div class="owl-carousel custom-carousel owl-theme">
-            <div class="item active">
+        <div class="products pl-[11.5%] mb-[120px]">
+          <div class="product-slider">
+            <div class="slide">
               <img src="/assets/images/prd1.png" alt="" />
-              <div class="item-desc">
-                <h3>ID-Card</h3>
+              <div class="slide-item">
+                <h3>ID - Card</h3>
                 <p>
                   Định dạng thẻ thông minh thay thế cho danh thiếp truyền thống
                   với đa dạng chất liệu như vàng, kim loại, gỗ,...
                 </p>
               </div>
-              <button>SẮP RA MẮT</button>
             </div>
-            <div class="item">
+            <div class="slide">
               <img src="/assets/images/prd2.png" alt="" />
-              <div class="item-desc">
+              <div class="slide-item">
                 <h3>ID-PET</h3>
                 <p>
                   Dễ dàng tìm thấy khi thú cưng của bạn đi lạc và cũng là phương
                   tiện để giao tiếp với bạn bè nhờ tích hợp bản đồ.
                 </p>
               </div>
-              <button>SẮP RA MẮT</button>
             </div>
-            <div class="item">
+            <div class="slide">
               <img src="/assets/images/prd3.png" alt="" />
-              <div class="item-desc">
+              <div class="slide-item">
                 <h3>ID-STICKER</h3>
                 <p>
                   Tích hợp tất cả mạng xã hội. Giao tiếp và kết nối với 1 chạm,
                   tiện lợi cho những ai cá tính và yêu thích sự năng động,
                 </p>
               </div>
-              <button>SẮP RA MẮT</button>
             </div>
-            <div class="item">
+            <div class="slide">
               <img src="/assets/images/prd4.png" alt="" />
-              <div class="item-desc">
+              <div class="slide-item">
                 <h3>ID-Luggage</h3>
                 <p>
                   Thẻ hành lý 4.0 của ID-Connect giúp hạn chế tối da việc thất
                   lạc và chế độ bảo hành lên đến 3 năm, đa dạng kiểu và màu sắc.
                 </p>
               </div>
-              <button>SẮP RA MẮT</button>
             </div>
-            <div class="item">
+            <div class="slide">
               <img src="/assets/images/prd5.png" alt="" />
-              <div class="item-desc">
+              <div class="slide-item">
                 <h3>ID-Keychain</h3>
                 <p>
                   Đa dạng mẫu mã, kiểu dáng, chất liệu, màu sắc phù hợp cho mọi
                   người, giúp giao tiếp và kết nôi dễ dàng.
                 </p>
               </div>
-              <button>SẮP RA MẮT</button>
             </div>
-            <div class="item">
+            <div class="slide">
               <img src="/assets/images/prd6.png" alt="" />
-              <div class="item-desc">
+              <div class="slide-item">
                 <h3>ID-Wallet</h3>
                 <p>
                   Ví bình thường trở thành ví thông minh nhờ công nghệ chống
                   đánh cắp dữ liệu khi ở nơi đông người.
                 </p>
               </div>
-              <button>SẮP RA MẮT</button>
             </div>
-            <div class="item">
+            <div class="slide">
               <img src="/assets/images/prd7.png" alt="" />
-              <div class="item-desc">
+              <div class="slide-item">
                 <h3>ID-Wristband</h3>
                 <p>
                   Khả năng định vị và liên lạc với người thân dùng cho trẻ em và
                   người lớn tuổi, hoạt động trên mọi lãnh thổ.
                 </p>
               </div>
-              <button>SẮP RA MẮT</button>
             </div>
           </div>
-        </section>
-        <div class="container">
-          <div
-            class="pick flex justify-between items-center px-[60px] py-[60px] mb-10 bg-black rounded-[20px]"
-          >
-            <span class="w-[38%] text-[36px] font-medium hiddenLeft"
-              >Chọn sản phẩm <br />
-              và kết nối ngay hôm nay</span
+        </div>
+        <div class="relative">
+          <img
+            src="/assets/images/pink-bg.png"
+            alt=""
+            class="absolute bottom-[0%] left-0 h-[]"
+          />
+          <div class="container">
+            <div
+              class="pick flex justify-between w-[84%] pl-[60px] mb-[120px] mx-auto bg-black rounded-[20px]"
             >
-            <div class="flex justify-between w-[50%]">
-              <button class="call-btn hiddenRight">Gọi Tư Vấn</button
-              ><button class="pick-btn hiddenRight">Chọn Sản Phẩm</button>
+              <div class="w-[60%] pt-10 hiddenLeft">
+                <p class="pick-title">CHỌN SẢN PHẨM</p>
+                <p class="pick-sub">VÀ KẾT NỐI HÔM NAY!</p>
+                <div>
+                  <button class="call-btn hiddenRight">Gọi Tư Vấn</button
+                  ><button class="pick-btn hiddenRight">Chọn Sản Phẩm</button>
+                </div>
+              </div>
+              <img
+                src="/assets/images/pick-img.png"
+                alt=""
+                class="w-[40%] pr-2 pb-2"
+              />
             </div>
-          </div>
-          <div class="how">
-            <div class="flex justify-between items-center mb-10">
-              <div class="w-[40%] hiddenLeft">
-                <p class="text-[28px] font-bold leading-7">HOW TO USE</p>
-                <p class="flex items-center text-[30px] font-light">
-                  DỄ DÀNG SỬ DỤNG
-                  <img
-                    src="/assets/images/intro-arrow.png"
-                    alt=""
-                    class="h-[65px] ml-10"
-                  />
+            <div class="start flex justify-between">
+              <div class="flex flex-col w-[33%] hiddenLeft">
+                <b class="mb-5 text-[40px]">BẮT ĐẦU</b>
+                <p class="mb-8 text-justify text-[18px]">
+                  Chọn mua sản phẩm phù hợp với nhu cầu của bạn, có thể là Card
+                  - Danh thiếp thông minh, ID Pet - cho thú cưng của bạn,
+                  ID-Sticker, ID-Luggage (tag hành lý) và nhiều hơn thế nữa...
                 </p>
+                <button class="start-btn"><p>Mua ngay</p></button>
               </div>
-              <div class="w-[60%] text-justify hiddenRight">
-                <p class="mb-2">
-                  Sau khi chọn lựa cho mình những sản phẩm phù hợp thì việc kích
-                  hoạt trở nên rất đơn giản, chỉ cần chạm sản phẩm vào điện
-                  thoại và điền thông tin đăng nhập cơ bản để kích hoạt sản phẩm
-                  đồng thời nhận diện bạn là chủ nhân của nó.
-                </p>
-                <p>
-                  Đồng thời, theo tuỳ dòng sản phẩm thì tính năng cũng khác nhau
-                  (định vị, âm nhạc, video, ngân hàng,...) nhưng hầu hết thì đều
-                  giúp cho người chủ sử dụng chia sẻ nhanh mạng xã hội, thông
-                  tin liên hệ của mình chỉ trong 1 chạm. Người nhận có thể gọi,
-                  liên hệ ngay lập tức cho bạn hoặc lưu danh bạ của bạn.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="start flex p-[50px]">
-            <div class="flex flex-col w-[47%] px-[40px] hiddenLeft">
-              <p class="mb-2 text-[30px]">Bắt đầu</p>
-              <p class="w-[80%] mb-5 text-[#ffffff80]">
-                Chọn mua sản phẩm phù hợp với nhu cầu của bạn, có thể là Card -
-                Danh thiếp thông minh, ID Pet - cho thú cưng của bạn,
-                ID-Sticker, ID0Luggage (tag hành lý) và nhiều hơn thế nữa...
-              </p>
-              <button class="buy-btn">Mua Ngay</button>
-            </div>
-            <div class="start-list flex flex-col w-[53%]">
-              <div class="hiddenRight flex mb-7 rounded-[20px] overflow-hidden">
-                <div class="w-[52%]">
-                  <span>1</span>
-                  <p class="mb-2 font-medium text-[18px]">Kích hoạt</p>
-                  <p class="text-[#ffffff80]">
-                    Chỉ 1 chạm vào điện thoại của bạn, tạo thông tin đăng nhập
-                    của riêng bạn.
-                  </p>
+              <div class="start-list flex flex-col w-[60%]">
+                <div class="hiddenRight">
+                  <div class="w-[52%]">
+                    <p class="start-numb">1</p>
+                    <p class="start-title">Kích hoạt</p>
+                    <p class="start-desc">
+                      Chỉ 1 chạm vào điện thoại của bạn, tạo thông tin đăng nhập
+                      của riêng bạn.
+                    </p>
+                  </div>
+                  <div class="">
+                    <img src="/assets/images/start1.png" alt="" />
+                  </div>
                 </div>
-                <div class="w-[48%]">
-                  <img src="/assets/images/start1.png" alt="" />
+                <div class="hiddenRight">
+                  <div class="w-[52%]">
+                    <p class="start-numb">2</p>
+                    <p class="start-title">Tuỳ Chỉnh</p>
+                    <p class="start-desc">
+                      Thêm thông tin liên hệ, mạng xã hội, bản đồ google map, âm
+                      nhạc, và hơn thế nữa...
+                    </p>
+                  </div>
+                  <div class="">
+                    <img src="/assets/images/start2.png" alt="" />
+                  </div>
                 </div>
-              </div>
-              <div class="hiddenRight flex mb-7 rounded-[20px] overflow-hidden">
-                <div class="w-[52%]">
-                  <span>2</span>
-                  <p class="mb-2 font-medium text-[18px]">Tuỳ Chỉnh</p>
-                  <p class="text-[#ffffff80]">
-                    Thêm thông tin liên hệ, mạng xã hội, bản đồ google map, âm
-                    nhạc, và hơn thế nữa...
-                  </p>
-                </div>
-                <div class="w-[48%]">
-                  <img src="/assets/images/start2.png" alt="" />
-                </div>
-              </div>
-              <div class="hiddenRight flex mb-7 rounded-[20px] overflow-hidden">
-                <div class="w-[52%]">
-                  <span>3</span>
-                  <p class="mb-2 font-medium text-[18px]">Kết nối</p>
-                  <p class="text-[#ffffff80]">
-                    Sẵn sàng để chia sẻ thông tin của bạn chỉ với một chạm, đem
-                    lại sự tiện lợi vô cùng.
-                  </p>
-                </div>
-                <div class="w-[48%]">
-                  <img src="/assets/images/start3.png" alt="" />
+                <div class="hiddenRight">
+                  <div class="w-[52%]">
+                    <p class="start-numb">3</p>
+                    <p class="start-title">Kết nối</p>
+                    <p class="start-desc">
+                      Sẵn sàng để chia sẻ thông tin của bạn chỉ với một chạm,
+                      đem lại sự tiện lợi vô cùng.
+                    </p>
+                  </div>
+                  <div class="">
+                    <img src="/assets/images/start3.png" alt="" />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="tech-wrapper relative mb-[100px]">
-            <div class="tech">
-              <div id="canvas_container"></div>
-              <div class="tech-content">
-                <p class="font-bold mb-5 hiddenLeft">TECHNOLOGY & HARDWARE</p>
-                <p class="font-light hiddenRight">POWERED BY IDCONNECT.ICU</p>
-              </div>
-            </div>
-            <img
-              src="/assets/images/tech-phone.png"
-              alt=""
-              class="absolute bottom-[-11%] right-[50%] translate-x-[50%] w-[90px]"
-            />
           </div>
         </div>
-        <div class="social w-full mb-[70px]">
-          <img src="/assets/images/social.png" alt="" class="w-full" />
-        </div>
-
         <div class="container">
           <div class="power relative mb-[60px]">
-            <div class="power-heading flex items-center mb-[50px]">
-              <div class="w-[50%] hiddenLeft">
-                <p class="text-[28px] font-bold leading-7">SỨC MẠNH</p>
-                <p class="flex items-center text-[30px] font-light">
-                  CỦA IDCONNECT
-                  <img
-                    src="/assets/images/intro-arrow.png"
-                    alt=""
-                    class="h-[65px] ml-10"
-                  />
+            <div
+              class="power-heading relative w-[40%] pt-[150px] pb-[100px] mx-auto text-center"
+            >
+              <div class="hiddenLeft">
+                <p class="mb-3 text-white text-[40px] font-bold leading-7">
+                  SỨC MẠNH
                 </p>
+                <p class="power-sub text-[28px] font-bold">CỦA IDCONNECT</p>
               </div>
-              <div>
-                <img
-                  src="/assets/images/power-banner.png"
-                  alt=""
-                  class="hiddenRight"
-                />
-              </div>
+              <img
+                src="/assets/images/power-img.png"
+                alt=""
+                class="hiddenRight absolute top-0 right-[50%] translate-x-[50%] z-[-1]"
+              />
             </div>
             <div class="power-list grid grid-cols-3 gap-10">
               <div class="hiddenLeft">
-                <p class="text-[18px] font-medium">Giao diện UI/UX</p>
-                <p class="font-light">người dùng và website</p>
                 <img src="/assets/images/power1.png" alt="" />
+                <b class="">Giao diện UI/UX</b>
+                <p class="">Người dùng và website</p>
               </div>
               <div class="hiddenLeft">
-                <p class="text-[18px] font-medium">Công nghệ</p>
-                <p class="font-light">mạnh mẽ nhất hiện tại</p>
                 <img src="/assets/images/power2.png" alt="" />
+                <b class="">Công nghệ</b>
+                <p class="">Mạnh mẽ nhất hiện tại</p>
               </div>
               <div class="hiddenLeft">
-                <p class="text-[18px] font-medium">Tối ưu tốc độ</p>
-                <p class="font-light">gần như không độ trễ</p>
                 <img src="/assets/images/power3.png" alt="" />
+                <b class="">Tối ưu tốc độ</b>
+                <p class="">Gần như không độ trễ</p>
               </div>
               <div class="hiddenRight">
-                <p class="text-[18px] font-medium">Đa dạng sản phẩm</p>
-                <p class="font-light">người dùng và website</p>
                 <img src="/assets/images/power4.png" alt="" />
+                <b class="">Đa dạng sản phẩm</b>
+                <p class="">Người dùng và website</p>
               </div>
               <div class="hiddenRight">
-                <p class="text-[18px] font-medium">Tính năng mới</p>
-                <p class="font-light">được cập nhật liên tục</p>
                 <img src="/assets/images/power5.png" alt="" />
+                <b class="">Tính năng mới</b>
+                <p class="">Được cập nhật liên tục</p>
               </div>
               <div class="hiddenRight">
-                <p class="text-[18px] font-medium">Đa quốc gia</p>
-                <p class="font-light">Vietnam, UK, US, China</p>
                 <img src="/assets/images/power6.png" alt="" />
+                <b class="">Đa quốc gia</b>
+                <p class="">Vietnam, UK, US, China</p>
               </div>
               <div class="hiddenLeft">
-                <p class="text-[18px] font-medium">Đi đầu về chất liệu</p>
-                <p class="font-light">Tre, PVC, Vàng, ...</p>
                 <img src="/assets/images/power7.png" alt="" />
+                <b class="">Đi đầu về chất liệu</b>
+                <p class="">Tre, PVC, Vàng, ...</p>
               </div>
               <div class="hiddenLeft">
-                <p class="text-[18px] font-medium">Bào hành</p>
-                <p class="font-light">1 đổi 1 trong 1 năm</p>
                 <img src="/assets/images/power8.png" alt="" />
+                <b class="">Bào hành</b>
+                <p class="">1 đổi 1 trong 1 năm</p>
               </div>
               <div class="hiddenLeft">
-                <p class="text-[18px] font-medium">Chi phí phù hợp</p>
-                <p class="font-light">đáp ứng mọi nhu cầu</p>
                 <img src="/assets/images/power9.png" alt="" />
+                <b class="">Chi phí phù hợp</b>
+                <p class="">Đáp ứng mọi nhu cầu</p>
               </div>
             </div>
           </div>
         </div>
-        <section class="nav mb-[70px]">
-          <canvas class="background"></canvas>
-          <h1>ID Connect</h1>
-          <h3 class="span loader">
-            <span class="m">I</span><span class="m">n</span
-            ><span class="m">f</span><span class="m">i</span
-            ><span class="m">n</span><span class="m">i</span
-            ><span class="m">t</span><span class="m">y</span
-            ><span class="m">&nbsp;</span><span class="m">o</span
-            ><span class="m">f</span><span class="m">&nbsp;</span
-            ><span class="m">T</span><span class="m">e</span
-            ><span class="m">c</span><span class="m">h</span
-            ><span class="m">n</span><span class="m">o</span
-            ><span class="m">l</span><span class="m">o</span
-            ><span class="m">g</span><span class="m">i</span
-            ><span class="m">e</span><span class="m">s</span>
-          </h3>
-        </section>
         <div class="container">
-          <div class="question px-[17%] mb-[70px]">
-            <p class="text-center mb-10 hiddenLeft">Câu hỏi thường gặp !!</p>
-            <div class="answers-list hiddenRight">
+          <div class="question px-[17%] mb-[70px] text-center">
+            <p class="inline-block mb-10 hiddenLeft">Câu hỏi thường gặp</p>
+            <div class="answers-list hiddenRight text-start">
               <div class="tab">
                 <input type="checkbox" id="chck1" />
                 <label class="tab-label" for="chck1">Lần đầu sử dụng ?</label>
@@ -809,16 +678,12 @@
           </div>
         </div>
       </main>
-      <footer class="font-medium">
+      <footer>
         <div class="container">
           <div class="footer-top flex justify-between mb-10">
-            <div class="w-[25%]">
+            <div class="w-[33%]">
               <div class="flex mb-5">
-                <img src="/assets/images/logo.png" alt="" class="mr-10" />
-                <div>
-                  <p>ID-CONNECT</p>
-                  <p>ECO-SYSTEM</p>
-                </div>
+                <img src="/assets/images/logo.png" alt="" class="" />
               </div>
               <p class="text-[15px] leading-5">
                 ID-Connect sinh ra nhằm thay thế các sản phẩm truyền thống bằng
@@ -827,39 +692,62 @@
                 tài khoản
               </p>
             </div>
-            <div class="w-[22%]">
+            <div class="w-[16%]">
               <ul>
                 <li>ABOUT</li>
-                <li>ID.CARD</li>
-                <li>ID.PET</li>
-                <li>ID.STICKER</li>
-                <li>ID.LUGGAGE</li>
+                <li>ID.Card</li>
+                <li>ID.Pet</li>
+                <li>ID.Sticker</li>
+                <li>ID.Keychain</li>
               </ul>
             </div>
-            <div class="w-[22%]">
+            <div class="w-[16%]">
               <ul>
                 <li>F.A.Q</li>
-                <li>SẢN PHẨM</li>
-                <li>HƯỚNG DẪN</li>
-                <li>CHÍNH SÁCH</li>
-                <li>LIÊN HỆ</li>
+                <li>Sản phẩm</li>
+                <li>Hướng dẫn</li>
+                <li>Chính sách</li>
+                <li>Liên hệ</li>
               </ul>
             </div>
-            <div>
-              <p class="follow mb-5">Follow us on</p>
+            <div class="w-[18%]">
+              <p class="follow mb-5">Theo dõi chúng tôi</p>
               <ul class="socials flex justify-between">
-                <li><i class="fa-brands fa-facebook"></i></li>
-                <li><i class="fa-brands fa-twitter"></i></li>
-                <li><i class="fa-brands fa-linkedin-in"></i></li>
-                <li><i class="fa-brands fa-youtube"></i></li>
-                <li><i class="fa-brands fa-instagram"></i></li>
-                <li><i class="fa-brands fa-pinterest"></i></li>
+                <li>
+                  <a href="">
+                    <img src="/assets/images/fb.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="/assets/images/ins.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="/assets/images/tiktok.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="/assets/images/pinterest.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="/assets/images/linkedin.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="/assets/images/telegram.png" alt="" />
+                  </a>
+                </li>
               </ul>
-              <button class="store-btn">MUA NGAY</button>
             </div>
           </div>
           <div
-            class="footer-bottom w-[90%] py-[25px] mx-auto text-center text-[14px] border-t-[1px] border-[#6c6789]"
+            class="footer-bottom w-[90%] py-[25px] mx-auto text-center text-[14px] text-[#B3B3BB]"
           >
             2023 © IDCONNECT.ICU WEBSITE - CODE, DEV & DESIGN BY IDG - ALL
             RIGHTS RESERVED
