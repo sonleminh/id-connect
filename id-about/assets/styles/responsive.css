@@ -1,0 +1,834 @@
+@media (min-width: 1024px) and (max-width: 1279px) {
+  header > div > div:first-child {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .header-menu ul li {
+    padding: 7px 18px;
+    margin: 0 5px;
+    white-space: nowrap;
+  }
+  header button {
+    width: 130px;
+  }
+  .login-btn {
+    margin-left: 15px;
+  }
+  .shop-btn {
+    margin-left: 10px;
+  }
+  .banner {
+    margin-bottom: 0;
+  }
+  .banner-content {
+    margin-bottom: 40px;
+  }
+  .info-founder {
+    margin-bottom: 20px !important;
+  }
+  .pick {
+    padding-left: 30px !important;
+  }
+  .pick > div {
+    width: 65%;
+  }
+  .pick > div > div {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .pick > div > div button {
+    width: 190px;
+    padding: 10px 16px;
+    margin: 0;
+  }
+  .pick-sub {
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  .vision > div {
+    margin: 0 auto;
+  }
+  .mission > div {
+    margin: 0 auto;
+  }
+  .vision-img,
+  .mission-img {
+    width: 50%;
+  }
+  .vision-img {
+    margin-right: 20px;
+  }
+  .mission-img {
+    margin-left: 20px;
+  }
+  .vision-title,
+  .mission-title {
+    font-size: 30px;
+  }
+  .mission-desc {
+    margin-right: 20px;
+  }
+  .vision-desc,
+  .mission-desc {
+    width: 100%;
+    line-height: 22px;
+  }
+  .value-heading {
+    font-size: 40px;
+  }
+  .time-line p {
+    font-size: 36px;
+  }
+  .problems-title {
+    font-size: 40px;
+  }
+  .product-list div p:last-child {
+    text-align: justify;
+  }
+  .location-heading {
+    font-size: 40px;
+  }
+  .question > p {
+    margin-bottom: 20px !important;
+  }
+  .footer-top > div:first-child {
+    padding-right: 20px;
+  }
+  .socials {
+    justify-content: start;
+    margin-top: 10px;
+  }
+  .socials li {
+    margin-right: 10px;
+  }
+  .follow {
+    width: 24% !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    width: 84% !important;
+  }
+  header > div > div:first-child {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .header-menu {
+    width: 100%;
+  }
+  .header-menu ul li {
+    padding: 7px 15px;
+    margin: 0;
+    white-space: nowrap;
+  }
+  header button {
+    width: 110px;
+    font-size: 14px;
+  }
+  .login-btn {
+    margin-left: 15px;
+  }
+  .shop-btn {
+    margin-left: 10px;
+  }
+  main {
+    padding-top: 80px;
+  }
+  .ellipse1 {
+    top: 10%;
+    height: 30%;
+  }
+  .ellipse2 {
+    top: 40%;
+    height: 30%;
+  }
+  .banner {
+    height: 450px;
+    margin-bottom: 40px;
+  }
+  .banner-content {
+    margin-bottom: 40px;
+  }
+  .banner-sub {
+    font-size: 28px;
+  }
+  .banner-title {
+    font-size: 34px;
+  }
+  .banner-btn {
+    width: 100%;
+  }
+  .banner-btn a button {
+    padding: 10px 25px;
+    font-size: 18px;
+  }
+  .about {
+    margin-bottom: 40px;
+  }
+  .about > div {
+    width: 66% !important;
+  }
+  .about > div > p:first-child {
+    margin-bottom: 10px;
+    font-size: 14px !important;
+  }
+  .about-img {
+    width: 25% !important;
+    margin: 0 auto;
+  }
+  .info-founder {
+    margin-bottom: 20px !important;
+  }
+  .pick {
+    width: 100% !important;
+    padding-left: 0 !important;
+    margin-bottom: 80px;
+    text-align: center;
+  }
+  .pick > div {
+    width: 65%;
+    padding: 30px;
+  }
+  .pick > div > div {
+    display: flex;
+    justify-content: space-between;
+  }
+  .pick > div > div button {
+    width: 190px;
+    padding: 10px 16px;
+    margin: 0;
+  }
+  .pick-sub {
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  .pick-img {
+    width: 30%;
+  }
+  .vision,
+  .mission {
+    padding: 25px;
+  }
+  .vision > div {
+    margin: 0 auto;
+  }
+  .mission > div {
+    margin: 0 auto;
+  }
+  .vision-img,
+  .mission-img {
+    width: 50%;
+  }
+  .vision-img {
+    margin-right: 20px;
+  }
+  .mission-img {
+    margin-left: 20px;
+  }
+  .vision-title,
+  .mission-title {
+    font-size: 30px;
+  }
+  .mission-desc {
+    margin-right: 20px;
+  }
+  .vision-desc,
+  .mission-desc {
+    width: 100%;
+    line-height: 22px;
+  }
+  .value-heading {
+    font-size: 36px;
+  }
+  .time-line {
+    padding-left: 8%;
+  }
+  .time-line p {
+    font-size: 36px;
+  }
+  .problems-title {
+    font-size: 36px;
+  }
+  .problem-list {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 30px !important;
+  }
+  .product-list div p:last-child {
+    text-align: justify;
+  }
+  .products {
+    padding-left: 7%;
+  }
+  .location-content {
+    width: 100%;
+  }
+  .location-heading {
+    font-size: 36px;
+  }
+  .hiring {
+    padding: 20px 30px;
+    margin-bottom: 40px;
+  }
+  .hiring-img {
+    width: 20%;
+  }
+  .hiring > div {
+    width: 50%;
+  }
+  .hiring-heading {
+    margin-bottom: 10px;
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .hiring-btn {
+    font-size: 18px;
+  }
+  .question {
+    padding: 8% !important;
+    margin-bottom: 50px !important;
+  }
+  .question > p {
+    margin-bottom: 20px !important;
+  }
+  .footer-top {
+    flex-direction: column;
+    margin-bottom: 0 !important;
+  }
+  .footer-top > div {
+    padding-right: 0 !important;
+    border-right: none !important;
+  }
+  .footer-top > div:first-child {
+    display: flex;
+  }
+  .footer-top > div:first-child,
+  .footer-top > div:nth-child(2),
+  .footer-top > div:nth-child(3) {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .footer-logo {
+    width: 120px;
+  }
+  .footer-text {
+    margin-left: 50px;
+  }
+  .socials {
+    justify-content: start;
+    margin-top: 10px;
+  }
+  .socials li {
+    margin-right: 25px;
+  }
+  .socials > li > a img {
+    width: 40px;
+  }
+}
+@media (min-width: 640px) and (max-width: 767px) {
+  .container {
+    width: 84% !important;
+  }
+  header {
+    height: 80px;
+  }
+  .logo {
+    width: 55px;
+  }
+  header > div > div:first-child {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .header-menu {
+    display: none !important;
+  }
+  .mobile-btn {
+    display: block !important;
+    font-size: 36px;
+    background: linear-gradient(to right, #6ddcff 0%, #7f60f9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .mobile-logo {
+    width: 60px;
+  }
+  main {
+    padding-top: 80px;
+  }
+  .ellipse1 {
+    top: 10%;
+    height: 30%;
+  }
+  .ellipse2 {
+    top: 35%;
+    height: 30%;
+  }
+  .banner {
+    height: 350px;
+    margin-bottom: 60px;
+  }
+  .banner-content {
+    margin-bottom: 40px;
+  }
+  .banner-sub {
+    font-size: 24px;
+  }
+  .banner-title {
+    font-size: 28px;
+  }
+  .banner-btn {
+    width: 100%;
+  }
+  .banner-btn a button {
+    padding: 8px 15px;
+    font-size: 16px;
+  }
+  .banner-btn a button img {
+    width: 20px;
+    margin-right: 5px;
+  }
+  .about {
+    flex-direction: column-reverse;
+  }
+  .about > div {
+    width: 100% !important;
+    margin-bottom: 40px;
+  }
+  .about > div > p:first-child {
+    margin-bottom: 10px;
+    font-size: 16px !important;
+  }
+  .about-img {
+    width: 70% !important;
+    margin: 0 auto;
+  }
+  .pick {
+    flex-direction: column;
+    padding-left: 0 !important;
+    margin-bottom: 80px;
+    text-align: center;
+  }
+  .pick > div {
+    width: 100%;
+    padding: 30px;
+  }
+  .pick > div > div {
+    display: flex;
+    justify-content: space-between;
+  }
+  .pick > div > div button {
+    width: 170px;
+    padding: 8px 20px;
+    margin: 0;
+    font-size: 16px;
+  }
+  .pick-img {
+    display: none;
+  }
+  .vision,
+  .mission {
+    flex-direction: column;
+    padding: 30px;
+  }
+  .vision > div {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .mission > div {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .mission > div {
+    margin-top: 20px;
+  }
+  .vision-img,
+  .mission-img {
+    width: 30%;
+  }
+  .vision-img {
+    margin-right: 20px;
+  }
+  .mission-img {
+    margin-left: 20px;
+  }
+  .vision-desc {
+    margin-top: 20px;
+  }
+  .vision-desc,
+  .mission-desc {
+    width: 100%;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .value-heading {
+    font-size: 30px;
+  }
+  .time-line {
+    padding-left: 8%;
+  }
+  .time-line p {
+    font-size: 30px;
+  }
+  .problems-title {
+    font-size: 30px;
+  }
+  .problem-list {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 30px !important;
+  }
+  .product-list div p:last-child {
+    text-align: justify;
+  }
+  .products {
+    padding-left: 5%;
+  }
+  .location {
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+  .location-content {
+    width: 100%;
+    padding: 0 !important;
+  }
+  .location-heading {
+    font-size: 30px;
+  }
+  iframe {
+    width: 100%;
+    border-radius: 15px;
+  }
+  .hiring {
+    flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 60px;
+  }
+  .hiring-img {
+    margin-bottom: 20px;
+  }
+  .hiring > div {
+    width: 100%;
+  }
+  .hiring-heading {
+    margin-bottom: 10px;
+    font-size: 26px;
+    line-height: 30px;
+  }
+  .hiring-sub {
+    margin-bottom: 20px;
+  }
+  .question {
+    padding: 8% !important;
+    margin-bottom: 50px !important;
+  }
+  .question > p {
+    margin-bottom: 20px !important;
+    font-size: 30px;
+  }
+  .footer-top {
+    flex-direction: column;
+    margin-bottom: 0 !important;
+  }
+  .footer-top > div {
+    padding-right: 0 !important;
+    border-right: none !important;
+  }
+  .footer-top > div:first-child,
+  .footer-top > div:nth-child(2),
+  .footer-top > div:nth-child(3) {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .socials {
+    justify-content: start;
+    margin-top: 10px;
+  }
+  .socials li {
+    margin-right: 15px;
+  }
+  .socials > li > a img {
+    width: 40px;
+  }
+  .footer-bottom {
+    width: 100% !important;
+    font-size: 13px !important;
+  }
+}
+
+@media (max-width: 639px) {
+  .container {
+    width: 84% !important;
+  }
+  header {
+    height: 69px;
+  }
+  .logo {
+    width: 50px;
+  }
+  header > div > div:first-child {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .header-menu {
+    display: none !important;
+  }
+  .mobile-btn {
+    display: block !important;
+    font-size: 30px;
+    background: linear-gradient(to right, #6ddcff 0%, #7f60f9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .mobile-logo {
+    width: 50px;
+  }
+  main {
+    padding-top: 80px;
+  }
+  .ellipse1 {
+    top: 10%;
+    height: 30%;
+  }
+  .ellipse2 {
+    top: 40%;
+    height: 30%;
+  }
+  .banner {
+    height: 250px;
+    margin-bottom: 40px;
+  }
+  .banner-content {
+    margin-bottom: 40px;
+  }
+  .banner-sub {
+    font-size: 20px;
+  }
+  .banner-title {
+    font-size: 24px;
+  }
+  .banner-btn {
+    width: 100%;
+  }
+  .banner-btn a button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  .banner-btn a button img {
+    width: 20px;
+    margin-right: 5px;
+  }
+  .about {
+    flex-direction: column-reverse;
+  }
+  .about > div {
+    width: 100% !important;
+    margin-bottom: 40px;
+  }
+  .about > div > p:first-child {
+    margin-bottom: 10px;
+    font-size: 16px !important;
+  }
+  .about-content {
+    margin-bottom: 20px;
+    font-size: 12px !important;
+    line-height: 22px;
+  }
+  .about-img {
+    width: 70% !important;
+    margin: 0 auto;
+  }
+  .pick {
+    flex-direction: column;
+    width: 100% !important;
+    padding-left: 0 !important;
+    text-align: center;
+  }
+  .pick > div {
+    width: 100%;
+    padding: 20px 20px 0;
+  }
+  .pick-sub {
+    font-size: 16px;
+  }
+  .pick > div > div button {
+    width: 80%;
+    padding: 8px 20px;
+    margin: 0 auto 20px;
+    font-size: 16px;
+  }
+  .pick-img {
+    display: none;
+  }
+  .vision,
+  .mission {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .vision > div,
+  .mission > div {
+    flex-direction: column;
+  }
+  .vision-img,
+  .mission-img {
+    width: 50%;
+  }
+  .vision-img {
+    margin-bottom: 10px;
+  }
+  .vision-title,
+  .mission-title {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  .mission-desc {
+    margin-bottom: 10px;
+  }
+  .vision-desc,
+  .mission-desc {
+    width: 100%;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .value {
+    margin-bottom: 40px;
+  }
+  .value-heading {
+    font-size: 24px;
+  }
+  .value-list {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .time-line {
+    padding: 0 5%;
+    margin-bottom: 40px;
+  }
+  .time-line p {
+    font-size: 24px;
+  }
+  .roadmap {
+    display: none;
+  }
+  .roadmap-mobile {
+    display: block !important;
+  }
+  .problems-title {
+    font-size: 24px;
+  }
+  .problems-desc {
+    line-height: 20px;
+  }
+  .problem-list {
+    grid-template-columns: repeat(1, 1fr) !important;
+    gap: 30px !important;
+  }
+  .problem-list > div {
+    padding: 20px;
+  }
+  .problem-list > div p:last-child {
+    line-height: 22px;
+  }
+  .product-list div {
+    padding: 20px;
+  }
+  .product-list div p:last-child {
+    line-height: 22px;
+    text-align: justify;
+  }
+  .products {
+    padding-left: 4%;
+    margin-bottom: 40px !important;
+  }
+  .location {
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+  .location-content {
+    width: 100%;
+    padding: 0 !important;
+  }
+  .location-heading {
+    font-size: 24px;
+  }
+  iframe {
+    width: 100%;
+    border-radius: 15px;
+  }
+  .hiring {
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 0;
+    margin-bottom: 60px;
+  }
+  .hiring-img {
+    margin-bottom: 20px;
+  }
+  .hiring > div {
+    width: 100%;
+  }
+  .hiring-heading {
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .hiring-sub {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  .hiring-btn {
+    padding: 8px 25px;
+    font-size: 18px;
+  }
+  .question {
+    padding: 0% !important;
+    margin-bottom: 50px !important;
+  }
+  .question > p {
+    margin-bottom: 20px !important;
+    font-size: 26px;
+  }
+  .footer-top {
+    flex-direction: column;
+    padding-top: 50px !important;
+    margin-bottom: 20px !important;
+  }
+  .footer-top > div {
+    padding: 0;
+    border-right: none !important;
+  }
+  .footer-top > div:first-child,
+  .footer-top > div:nth-child(2),
+  .footer-top > div:nth-child(3) {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .footer-top > div:first-child > img {
+    height: auto;
+  }
+  .footer-top > div:first-child > p:last-child {
+    text-align: justify;
+  }
+  .footer-top > div:last-child {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .footer-top > div:last-child > p {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  .footer-top > div:last-child > button {
+    margin-top: 20px;
+  }
+  .socials {
+    justify-content: start !important;
+    margin-top: 10px;
+  }
+  .socials li {
+    margin-right: 20px;
+  }
+  .socials > li > i {
+    font-size: 26px;
+  }
+  .footer-bottom {
+    width: 100%;
+  }
+}

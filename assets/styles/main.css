@@ -399,9 +399,9 @@ header button {
 }
 
 .answers-list input {
-  position: absolute;
-  opacity: 0;
-  z-index: -1;
+position: absolute;
+opacity: 0;
+z-index: -1;
 }
 
 .tab {
@@ -445,10 +445,6 @@ header button {
   padding: 1em;
   font-size: 0.75em;
   cursor: pointer;
-}
-.tab-close:hover {
-}
-input:checked + .tab-label {
 }
 
 input:checked + .tab-label::after {
@@ -620,26 +616,4 @@ input:checked ~ .tab-content {
 .slide-item p {
   font-size: 15px;
   text-align: justify;
-}
-
-.prev,
-.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-
-  width: 40px;
-  height: 40px;
-  background: rgb(255, 255, 255, 0.08);
-  font-size: 20px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.prev {
-  left: 0;
-}
-
-.next {
-  right: 0;
 }

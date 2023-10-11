@@ -1,0 +1,63 @@
+/******* Middle section CSS Start ******/
+/* -------- Landing page ------- */
+
+.game-section .owl-stage {
+  margin: 15px 0;
+  display: flex;
+  display: -webkit-flex;
+}
+.game-section .item {
+  width: 310px;
+  height: 450px;
+  padding: 20px 30px 30px;
+  margin: 0 15px;
+  display: flex;
+  flex-direction: column;
+  display: -webkit-flex;
+  justify-content: space-between;
+  background: rgb(249, 249, 249, 0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.game-section .item img {
+  width: 84%;
+  margin: 0 auto;
+}
+
+.game-section .item:hover {
+  background: rgb(57, 58, 159, 0.4);
+}
+/******** Middle section CSS End *******/
+
+/***** responsive css Start ******/
+
+@media (min-width: 992px) and (max-width: 1279px) {
+  .game-section .item img {
+    width: 68%;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+}
+
+@media (max-width: 639px) {
+  .game-section .item {
+    width: 240px;
+    height: 350px;
+    padding: 15px 20px 20px;
+  }
+  .game-section .item img {
+    width: 75%;
+  }
+  .slide-item h3 {
+    margin: 15px auto;
+    font-size: 20px;
+  }
+  .slide-item p {
+    font-size: 14px;
+  }
+}

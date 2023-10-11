@@ -143,7 +143,7 @@
   }
   .header-menu ul li {
     padding: 7px 15px;
-    margin: 0;
+    margin: 0;  
     white-space: nowrap;
   }
   header button {
@@ -298,7 +298,6 @@
   }
   .question > p {
     margin-bottom: 20px !important;
-    /* font-size: 26px; */
   }
   .footer-top {
     flex-direction: column;
